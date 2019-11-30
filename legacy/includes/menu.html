@@ -1,0 +1,83 @@
+<uib-accordion close-others="oneAtATime" ng-show="!isHome">
+  <div uib-accordion-group class="menu-item" ng-click="clickFunction('/idea')" is-open="status.idea">
+    <uib-accordion-heading>
+      <div ng-class="{'active': $route.current.activetab == 'idea'}">
+        the idea
+      </div>
+    </uib-accordion-heading>
+  </div>
+  <div uib-accordion-group class="menu-item" ng-click="clickFunction('/island')" is-open="status.island">
+    <uib-accordion-heading>
+      <div ng-class="{'active': $route.current.activetab == 'island'}">
+        the island
+      </div>
+    </uib-accordion-heading>
+    <div class="menu-content">
+      <a href= "#activities" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item">activities</div></a>
+      <a href= "#self-organization" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item">self-organization</div></a>
+      <a href= "#community" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item">community</div></a>
+      <a href= "#follow-up" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item">follow-up networking</div></a>
+    </div>
+  </div>
+  <!-- WORKSHOPS -->
+  <div uib-accordion-group class="menu-item" is-open="status.workshops">
+    <uib-accordion-heading >
+      <div ng-click="clickFunction('/workshops')" ng-class="{'active': $route.current.activetab == 'workshops' || $route.current.activetab == 'workshops-2016'}">
+        the workshops
+      </div>
+    </uib-accordion-heading>
+    <div class="menu-content">
+      <a><div class="menu-sub-item" ng-click="clickFunction('/workshops')"  ng-class="{'active': $route.current.activetab == 'workshops'}">2017</div></a>
+      <a><div class="menu-sub-item" ng-click="clickFunction('/workshops-2016')" ng-class="{'active': $route.current.activetab == 'workshops-2016'}">2016</div></a>
+
+      <!-- <a href= "#workshops" ng-click="closeMenu(); scrollTop()"><div class="menu-sub-item" ng-class="{'active': $route.current.activetab == 'workshops'}">2017</div></a>
+      <a href= "#workshops-2016" ng-click=" scrollTop(); closeMenu()"><div class="menu-sub-item" ng-class="{'active': $route.current.activetab == 'workshops-2016'}">2016</div></a> -->
+    </div>
+  </div>
+  <!-- SHOW -->
+  <div uib-accordion-group class="menu-item" is-open="status.show">
+    <uib-accordion-heading>
+      <div ng-click="clickFunction('/show')" ng-class="{'active': $route.current.activetab == 'show' || $route.current.activetab == 'show-2016'}">
+        the show
+      </div>
+    </uib-accordion-heading>
+    <div uib-accordion class="menu-content">
+      <div uib-accordion-group is-open="inner_status.show2017">
+        <uib-accordion-heading>
+          <div ng-click="clickFunction('/show')" class="menu-sub-item" ng-class="{'active': $route.current.activetab == 'show'}">
+            2017
+          </div>
+        </uib-accordion-heading>
+        <a href="#berlin" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item-2">Berlin</div></a>
+        <a href="#tbilisi" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item-2">Tbilisi</div></a>
+        <a href="#baku" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item-2">Baku</div></a>
+        <a href="#yerevan" du-smooth-scroll du-scrollspy offset="48" ng-click="closeMenu()"><div class="menu-sub-item-2">Yerevan</div></a>
+      </div>
+      <div uib-accordion-group is-open="inner_status.show2016">
+        <uib-accordion-heading>
+          <div ng-click="clickFunction('/show-2016')" class="menu-sub-item" ng-class="{'active': $route.current.activetab == 'show-2016'}">
+            2016
+          </div>
+        </uib-accordion-heading>
+      </div>
+    </div>
+  </div>
+  <!-- DOCUMENTARY -->
+  <div uib-accordion-group class="menu-item" ng-click="clickFunction('/documentary'); closeMenu(); scrollTop()" is-open="status.documentary">
+    <uib-accordion-heading>
+      <div ng-class="{'active': $route.current.activetab == 'documentary'}">
+        documentary
+      </div>
+    </uib-accordion-heading>
+  </div>
+  <div uib-accordion-group class="menu-item" ng-click="clickFunction('/contact'); closeMenu(); scrollTop()" is-open="status.contact">
+    <uib-accordion-heading>
+      <div ng-class="{'active': $route.current.activetab == 'contact'}">
+        contact
+      </div>
+    </uib-accordion-heading>
+  </div>
+</uib-accordion>
+<!-- <div class="menu-item-pdf">
+  <a href="resources/pdf/TransculturalArtLab2018_opencall.pdf" target="_blank"><b>apply now for T.A.L. 2018</b></a>
+</div> -->

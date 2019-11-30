@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="Organised by a group of international artists, the transcultural art lab aims to provide a framework for transcultural dialogue, divergent thinking and artistic creation. The target group is young adults who are keen to go on a twelve-day joint venture - a creative research project which will be inspired by the broad theme of UTOPIA but also aims to deal with national identities, to question common cultural heritage and to dare to look into our common future." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8"/>
+  <!-- FONTS -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet"> -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- FAVICON -->
+  <link rel="icon" type="image/jpg" href="favicon.jpg">
+  <!-- JS -->
+  <!-- load angular, ngRoute, ngAnimate -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <!-- smooth scrolling -->
+  <script src="js/angular-scroll.min.js"></script>
+  <!-- VIMEO -->
+  <script src="js/angular-vimeo-embed.min.js"></script>
+  <!-- load bootstrap UI -->
+  <script src="js/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
+  <!-- SOUNDCLOUD -->
+  <script src="js/soundwidget.js"></script>
+  <!-- PRELOADER -->
+  <script src="js/preloader.js"></script>
+  <!-- load app -->
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div ng-app="animateApp" ng-controller="allController">
+    <!-- <div class="preloader" ng-show="!pageIsLoaded"> </div> -->
+
+    <div class="page {{ pageClass }}" ng-view></div>
+    <div class="mobile-background" ng-class="{show:showmenu}" ng-click="toggleMenu()" ng-swipe-left="showmenu=false" scroll="no"> </div>
+    <div class="menu" ng-class="{show:showmenu}" ng-show="$route.current.activetab != 'home'" ng-include="'includes/menu.html'"></div>
+    <div class="mobile-header" ng-show="!isHome" ></div>
+    <button class="burger-menu" ng-show="!isHome" ng-click="toggleMenu()"></button>
+    <div class="masthead {{ mastheadClass }}" ng-include="'includes/logo-menu.html'"></div>
+
+    <!-- <div class="page-preloader" id="page-loading"></div>
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      console.log("DOM loaded");
+      /*VANILLA JAVASCRIPT*/
+      var element = document.getElementById("page-loading");
+      element.parentNode.removeChild(element);
+    });
+    </script> -->
+
+  </div>
+</body>
+</html>

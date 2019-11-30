@@ -1,0 +1,25 @@
+
+<div class="logo-mobile-clickarea" ng-click="mobileClick(isHome)"> </div>
+
+<div class="logoText designYour " ng-show="isHome">design your</div>
+<div class="logo ">
+  <section class="logo utopia">
+    <span class="word utopia" ng-style="logoColor">U
+      <span class="utopia overlay overlay-u" ng-if="flair.u || $route.current.activetab == 'idea'" >u</span>
+      <span class="utopia overlay overlay-t" ng-if="flair.t || $route.current.activetab == 'island'">t</span>
+      <span class="utopia overlay overlay-o" ng-if="flair.o || $route.current.activetab == 'workshops' || $route.current.activetab == 'workshops-2016'">o</span>
+      <span class="utopia overlay overlay-p" ng-if="flair.p || $route.current.activetab == 'show' || $route.current.activetab == 'show-2016'">p</span>
+      <span class="utopia overlay overlay-i" ng-if="flair.i || $route.current.activetab == 'documentary'">i</span>
+      <span class="utopia overlay overlay-a" ng-if="flair.a || $route.current.activetab == 'contact'">a</span>
+
+      <span class="utopia action action-u" ng-click="logoClick('u'); flair.u = true; label = ''; status.idea = true" ng-mouseenter="flair.u = true; label = 'the idea';" ng-mouseout="flair.u = false; label = ' ';" ></span>
+      <span class="utopia action action-t" ng-click="logoClick('t'); flair.t = true; label = ''; status.island = true" ng-mouseenter="flair.t = true; label='the island';" ng-mouseout="flair.t = false; label = ' ';"></span>
+      <span class="utopia action action-o" ng-click="logoClick('o'); flair.o = true; label = ''; status.workshops = true" ng-mouseenter="flair.o = true; label = 'the workshops';" ng-mouseout="flair.o = false; label = ' ';"></span>
+      <span class="utopia action action-p" ng-click="logoClick('p'); flair.p = true; label = ''; status.show = true; status.show = true" ng-mouseenter="flair.p = true; label = 'the show';" ng-mouseout="flair.p = false; label = ' ';"></span>
+      <span class="utopia action action-i" ng-click="logoClick('i'); flair.i = true; label = ''; status.documentary = true" ng-mouseenter="flair.i = true; label = 'documentary';" ng-mouseout="flair.i = false; label = ' ';"></span>
+      <span class="utopia action action-a" ng-click="logoClick('a'); flair.a = true; label = ''; status.contact = true" ng-mouseenter="flair.a = true; label = 'contact';" ng-mouseout="flair.a = false; label = ' ';"></span>
+    </span>
+  </section>
+</div>
+
+<div class="logoText categoryLabel " ng-show="isHome" >{{label}}</div>

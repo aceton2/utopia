@@ -1,10 +1,9 @@
 @import 'layout';
 
 .contact {
-    @extend %page;
+    @extend %page-simple;
 
-    margin-top: calc(#{$header-margin} + #{$sm-logo-height});
-
+    // why is this p special?? 
     p { 
         margin: 0 0 2rem 0;
         font-size:1.3rem;

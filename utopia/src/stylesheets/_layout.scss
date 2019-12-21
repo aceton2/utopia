@@ -1,4 +1,7 @@
 
+$header-margin: 10vh;
+$sm-logo-height: 80px;
+
 %page {    
     word-wrap: break-word;
 
@@ -13,8 +16,12 @@
 
     img {
         margin-bottom: 4rem;
+        width: 100%;
     }
 }
 
-$header-margin: 10vh;
-$sm-logo-height: 80px;
+%page-simple {
+    @extend %page;
+
+    margin-top: calc(#{$header-margin} + #{$sm-logo-height});
+}

@@ -1,0 +1,31 @@
+@import 'layout';
+
+.idea {
+    @extend %page-simple;
+
+    padding: 0 2rem;
+
+    .quote {
+        letter-spacing: 0.1rem;
+        color: #993300;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .quote-author {
+        text-align: right;
+        color: #993300;
+    }
+
+    ul {
+        padding-left: 2rem;
+        margin-bottom: 2rem;
+
+        li{
+            margin-bottom:2rem;
+            font-size:1.2rem;
+            letter-spacing: 0.1rem;
+            text-align: justify;
+        }
+    }
+}

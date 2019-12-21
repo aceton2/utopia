@@ -1,0 +1,41 @@
+@import 'layout';
+
+:host {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.placeholder {
+    border-right: 230px solid white;
+}
+
+.menu-box {
+
+    position: fixed;
+    margin: $header-margin 30px 0px;
+
+    .logo {
+        height: $sm-logo-height;
+    }
+
+    .links {
+
+        .link {
+
+            &:not(:first-child) { margin-top: 5px; }
+
+            line-height: 24px;    
+    
+            a {
+                text-decoration: none;
+                outline: none;
+                color: inherit;
+
+                &:hover,
+                &:focus {
+                    color:#f96353;
+                }
+            }        
+        }
+    }
+}

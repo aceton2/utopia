@@ -1,0 +1,20 @@
+
+%page {    
+    word-wrap: break-word;
+
+    width: 80%;
+    max-width: 600px;
+
+    a {
+        font-weight: 600;
+        text-decoration: none;
+        color: black;
+    }
+
+    img {
+        margin-bottom: 4rem;
+    }
+}
+
+$header-margin: 10vh;
+$sm-logo-height: 80px;

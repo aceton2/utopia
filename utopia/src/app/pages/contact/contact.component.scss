@@ -1,0 +1,35 @@
+@import 'layout';
+
+.contact {
+    @extend %page;
+
+    margin-top: calc(#{$header-margin} + #{$sm-logo-height});
+
+    p { 
+        margin: 0 0 2rem 0;
+        font-size:1.3rem;
+        line-height:2.2rem;
+        letter-spacing: 0.013rem;
+        text-align: left;
+    }
+
+    h1, h2, h3, h4 {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .contact-heading{
+        background-color: #ffffcf;
+        margin: 0 0 2rem 0;
+
+        h2 {
+            padding: 0.4rem 0 0.4rem  0;
+            margin-top: 1rem;
+        }
+    }
+
+    .contact-logo img{
+        width: 100%;
+    }
+
+}

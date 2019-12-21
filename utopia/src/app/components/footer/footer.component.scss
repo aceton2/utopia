@@ -1,0 +1,46 @@
+.footer {
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+    text-align: center;
+
+
+    .page-up {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    hr {
+        margin: 3rem 0 0 0;
+        background: #e8e8e8;
+        height: 1px;
+        padding: 0;
+        border: 0;
+    }
+
+    .footer-text {
+        padding: 1rem 0rem 0rem 0rem;
+        font-size: 1.3rem;
+    }
+
+    .facebook-text {
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 2rem 0;
+
+        img {
+            width: 1.8rem;
+            height: 1.8rem;
+            vertical-align: top;
+            margin-bottom: 0;
+            margin-right: 0.4rem;
+        }
+    }
+
+    .footer-logo {
+        display: block;
+        margin: 2rem auto;
+        width: 9rem;
+    }
+}

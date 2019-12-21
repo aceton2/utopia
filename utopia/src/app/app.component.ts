@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { slideInAnimation } from './app.animations';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +12,22 @@ import { slideInAnimation } from './app.animations';
     slideInAnimation
   ]
 })
-export class AppComponent {
-  title = 'utopia';
+export class AppComponent implements OnInit, OnDestroy {
+
+  subscription: Subscription
+  
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.subscription = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    )
+    .subscribe( () => window.scrollTo(0,0))
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 
   prepareRoute(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];

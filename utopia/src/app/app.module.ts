@@ -13,6 +13,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CoverComponent } from './pages/cover/cover.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LogoComponent } from './components/logo/logo.component';
     ContactComponent,
     CoverComponent,
     MenuComponent,
-    LogoComponent
+    LogoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

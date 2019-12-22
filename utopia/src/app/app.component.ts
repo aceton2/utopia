@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { slideInAnimation } from './app.animations';
 import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +14,15 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  subscription: Subscription
+  subscription: Subscription;
+  currentPath: string;
   
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.subscription = this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
+      filter(event => event instanceof NavigationEnd),
+      tap( (event: NavigationEnd) => this.currentPath = event.url)
     )
     .subscribe( () => window.scrollTo(0,0))
   }

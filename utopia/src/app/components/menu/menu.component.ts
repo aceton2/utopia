@@ -1,15 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MenuItems, MenuTree } from '../accordion/types';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
 
-  constructor() { }
+  @Input() currentPath: string;
 
-  ngOnInit() {
-  }
+  menuItems: MenuItems = [
+    { id: 16, name: 'the idea', active: false, url: '/idea' },
+    { id: 1, name: 'the island', active: false, url: '/island' },
+    { id: 2, name: 'the workshops', active: false, url: '/workshops'  },
+    { id: 3, name: 'the show', active: false,  url: '/show' },
+    { id: 18, name: 'documentary', active: false,  url: '/documentary' },
+    { id: 17, name: 'contact', active: false,  url: '/contact' },
+    { id: 4, name: 'activities', url: '#' },
+    { id: 5, name: 'self-organization', url: '#'  },
+    { id: 15, name: 'community', url: '#'  },
+    { id: 6, name: 'follow-up networking', url: '#' },
+    { id: 7, name: '2017', url: '#' },
+    { id: 8, name: '2016', url: '#'  },
+    { id: 9, name: '2017', active: false },
+    { id: 10, name: '2016', url: '#'  },
+    { id: 11, name: 'Berlin', url: '#' },
+    { id: 12, name: 'Tiblisi', url: '#'  },
+    { id: 13, name: 'Baku', url: '#' },
+    { id: 14, name: 'Yerevan', url: '#'  },
+  ]
 
+  menuTree: MenuTree = [
+    {id: 16, children: [] },
+    {id: 1, children: [4, 5, 15, 6]},
+    {id: 2, children: [7, 8]},
+    {id: 3, children: [ 
+      {id: 9, children: [11, 12, 13, 14]}, 
+      10
+    ]},
+    {id: 18, children: [] },
+    {id: 17, children: [] }
+  ]
 }

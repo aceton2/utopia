@@ -14,6 +14,7 @@ import { CoverComponent } from './pages/cover/cover.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CoverComponent,
     MenuComponent,
     LogoComponent,
-    FooterComponent
+    FooterComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,

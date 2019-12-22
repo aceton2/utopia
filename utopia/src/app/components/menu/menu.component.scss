@@ -17,26 +17,4 @@
     .logo {
         height: $sm-logo-height;
     }
-
-    .links {
-
-        .link {
-
-            &:not(:first-child) { margin-top: 5px; }
-
-            line-height: 24px;    
-    
-            a {
-                text-decoration: none;
-                outline: none;
-                font-weight: 400;
-                color: inherit;
-
-                &:hover,
-                &:focus {
-                    color:#f96353;
-                }
-            }        
-        }
-    }
 }

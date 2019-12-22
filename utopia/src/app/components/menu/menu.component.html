@@ -4,16 +4,15 @@
 <div class="menu-box">
 
     <div class="logo">
-        <app-logo></app-logo>
+        <app-logo
+            [currentPath]="currentPath">
+        </app-logo>
     </div>
 
-    <div class="links">
-        <div class="link"> <a [routerLink]="['/idea']" >the idea</a> </div>
-        <div class="link"> <a [routerLink]="['/island']" >the island</a> </div>
-        <div class="link"> <a [routerLink]="['/workshops']" >the workshops</a> </div>
-        <div class="link"> <a [routerLink]="['/show']" >the show</a> </div>
-        <div class="link"> <a [routerLink]="['/documentary']" >documentary</a> </div>
-        <div class="link"> <a [routerLink]="['/contact']" >contact</a> </div>
-    </div>
+    <accordion 
+        [currentPath]="currentPath"
+        [menuItems]="menuItems"
+        [menuTree]="menuTree">
+    </accordion>
 
 </div>

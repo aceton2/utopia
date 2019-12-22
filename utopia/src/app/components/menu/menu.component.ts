@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MenuItems, MenuTree } from '../accordion/types';
+import { MenuItems, MenuTree } from '../accordion/types/Menu';
 
 @Component({
   selector: 'app-menu',
@@ -29,7 +29,7 @@ export class MenuComponent {
     { id: 12, name: 'Tiblisi', url: '#'  },
     { id: 13, name: 'Baku', url: '#' },
     { id: 14, name: 'Yerevan', url: '#'  },
-  ]
+  ];
 
   menuTree: MenuTree = [
     {id: 16, children: [] },
@@ -41,5 +41,6 @@ export class MenuComponent {
     ]},
     {id: 18, children: [] },
     {id: 17, children: [] }
-  ]
+  ];
+
 }

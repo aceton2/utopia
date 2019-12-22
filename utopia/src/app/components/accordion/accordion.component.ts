@@ -1,16 +1,21 @@
 import { Component, Input } from '@angular/core';
-import { MenuTree, MenuItems, MenuItem } from './types';
+import { MenuTree, MenuItems, MenuItem } from './types/Menu';
 import { Router } from '@angular/router';
+import { collapseAnimation } from './accordion.animations';
 
 @Component({
   selector: 'accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.scss']
+  styleUrls: ['./accordion.component.scss'],
+  animations: [
+    collapseAnimation
+  ]
 })
 export class AccordionComponent {
+
   @Input() menuItems: MenuItems;
   @Input() menuTree: MenuTree;
-  
+
   @Input() set currentPath(value: string) {
     if(value) {
       this.menuItems.forEach( item => item.active = value.indexOf(item.url) != -1)
@@ -24,13 +29,9 @@ export class AccordionComponent {
     return this.menuItems.find(item => item.id === id);
   }
 
-  toggle(item: MenuItem, branchItems: Array<any>) {
-    if(item.url) { this.router.navigate([item.url]); }
-    const ids = branchItems.map( item => item.id | item );
-    this.menuItems.forEach( item => item.active = this.itemInBranch(item.id, ids) );
-  }
-
-  itemInBranch(itemId, ids): boolean {
-    return ids.indexOf( itemId ) != -1
+  toggle(item: MenuItem) {
+    if(item.url) { 
+      setTimeout( () => this.router.navigate([item.url]), 100 ); 
+    }
   }
 }

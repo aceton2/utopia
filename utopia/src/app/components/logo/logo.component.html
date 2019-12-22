@@ -8,7 +8,8 @@
       U
 
       <!-- flairs on current location -->
-        <span 
+      <span 
+        @showHideAnimation
         *ngIf="current" 
         [ngClass]="['utopia', 'overlay', 'overlay-' + current]"> 
         {{ current }} 
@@ -16,6 +17,7 @@
 
       <!-- flairs on hover -->
       <span 
+        @showHideAnimation
         *ngIf="flair" 
         [ngClass]="['utopia', 'overlay', 'overlay-' + flair]"> 
         {{ flair }} 

@@ -1,11 +1,15 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { showHideAnimation } from './logo.animations';
 
 @Component({
   selector: 'app-logo',
   templateUrl: './logo.component.html',
-  styleUrls: ['./logo.component.scss']
+  styleUrls: ['./logo.component.scss'],
+  animations: [
+    showHideAnimation
+  ]
 })
 export class LogoComponent {
 
@@ -14,7 +18,8 @@ export class LogoComponent {
   current: boolean | string;
 
   @Input() set currentPath(value: string) {
-    this.setCurrent(value);
+    this.current = false; // to trigger animation
+    setTimeout( () => this.setCurrent(value), 500);
   }
 
   letters = [

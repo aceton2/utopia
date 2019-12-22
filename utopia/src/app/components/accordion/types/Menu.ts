@@ -1,15 +1,4 @@
 
-type Item = { 
-  name: string, 
-  url: string
-}
-
-export type Menu = {
-  name: string, 
-  active: boolean,
-  submenu: Array<Menu | Item>
-}
-
 interface TreeItem {
   id: number,
   children: Array<number | TreeItem>

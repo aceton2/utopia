@@ -8,24 +8,40 @@
 .logo {
     white-space:nowrap;
     display:inline-block;
+    
+    .word {
+        white-space:nowrap; 
+        display:block;
+
+        position:relative;     
+        width:100%; 
+
+        .overlay { 
+            position:absolute; 
+            z-index:2; 
+            pointer-events:none; 
+
+            &.overlay-u { left:-8%; color:#ffd7d7; }
+            &.overlay-t { left:10%; color:#feff92; }
+            &.overlay-o { left:28%; color:#92feff; }
+            &.overlay-p { left:46%; color:#acffc8; }
+            &.overlay-i { left:60%; color:#ecc2fb; }
+            &.overlay-a { left:75%; color:#ffd598; }
+        }
+
+        .action {
+            position:absolute; 
+            z-index:5; 
+            display:inline-block; 
+            height:100%;
+            cursor: pointer;
+
+            &.action-u { left:-1%; width:21%; }
+            &.action-t { left:20%; width:15%; }
+            &.action-o { left:35%; width:20%; }
+            &.action-p { left:55%; width:15%; }
+            &.action-i { left:70%; width:13%; }
+            &.action-a { left:83%; width:17%; }
+        }
+    }
 }
-
-// .logo .word { position:relative; white-space:nowrap; width:100%; display:block; }
-// .logo .word .overlay { position:absolute; z-index:2; pointer-events:none; }
-// .logo .word .overlay-u { left:-6%; color:#ffd7d7; }
-// .logo .word .overlay-t { left:11%; color:#feff92; }
-// .logo .word .overlay-o { left:29%; color:#92feff; }
-// .logo .word .overlay-p { left:46%; color:#acffc8; }
-// .logo .word .overlay-i { left:60%; color:#ecc2fb; }
-// .logo .word .overlay-a { left:73%; color:#ffd598; }
-
-// .logo .word .action {
-//     position:absolute; z-index:5; display:inline-block; height:100%;
-// }
-
-// .logo .word .action-u { left:-1%; width:21%; }
-// .logo .word .action-t { left:20%; width:15%; }
-// .logo .word .action-o { left:35%; width:20%; }
-// .logo .word .action-p { left:55%; width:15%; }
-// .logo .word .action-i { left:70%; width:13%; }
-// .logo .word .action-a { left:83%; width:17%; }

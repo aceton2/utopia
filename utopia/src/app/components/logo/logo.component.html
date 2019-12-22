@@ -2,18 +2,25 @@
 <div class="logoText designYour " *ngIf="isHome">design your</div>
 
 <div class="logo utopia">
-  U
-      <span class="utopia overlay overlay-u" *ngIf="flair.u" >u</span>
-      <span class="utopia overlay overlay-t" *ngIf="flair.t">t</span>
-      <span class="utopia overlay overlay-o" *ngIf="flair.o">o</span>
-      <span class="utopia overlay overlay-p" *ngIf="flair.p">p</span>
-      <span class="utopia overlay overlay-i" *ngIf="flair.i">i</span>
-      <span class="utopia overlay overlay-a" *ngIf="flair.a">a</span>
+  <div class="word">
 
-      <span class="utopia action action-u" (click)="logoClick('u'); flair.u = true; label = ''; status.idea = true" (mouseenter)="flair.u = true; label = 'the idea';" (mouseleave)="flair.u = false; label = ' ';" ></span>
-      <span class="utopia action action-t" (click)="logoClick('t'); flair.t = true; label = ''; status.island = true" (mouseenter)="flair.t = true; label='the island';" (mouseleave)="flair.t = false; label = ' ';"></span>
-      <span class="utopia action action-o" (click)="logoClick('o'); flair.o = true; label = ''; status.workshops = true" (mouseenter)="flair.o = true; label = 'the workshops';" (mouseleave)="flair.o = false; label = ' ';"></span>
-      <span class="utopia action action-p" (click)="logoClick('p'); flair.p = true; label = ''; status.show = true; status.show = true" (mouseenter)="flair.p = true; label = 'the show';" (mouseleave)="flair.p = false; label = ' ';"></span>
-      <span class="utopia action action-i" (click)="logoClick('i'); flair.i = true; label = ''; status.documentary = true" (mouseenter)="flair.i = true; label = 'documentary';" (mouseleave)="flair.i = false; label = ' ';"></span>
-      <span class="utopia action action-a" (click)="logoClick('a'); flair.a = true; label = ''; status.contact = true" (mouseenter)="flair.a = true; label = 'contact';" (mouseleave)="flair.a = false; label = ' ';"></span>
+      <!-- the full word -->
+      U
+
+      <!-- flairs on hover -->
+      <span 
+        *ngIf="flair" 
+        [ngClass]="['utopia', 'overlay', 'overlay-' + flair]"> 
+        {{ flair }} 
+      </span>
+
+      <!-- clickable, hoverable divs -->
+      <div 
+        *ngFor="let l of letters"
+        [ngClass]="['utopia', 'action', 'action-' + l.letter]" 
+        (click)="logoClick(l.route); flair = false;" 
+        (mouseenter)="flair = l.letter;" 
+        (mouseleave)="flair = false;">
+    </div>
+  </div>
 </div>

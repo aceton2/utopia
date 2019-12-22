@@ -7,6 +7,13 @@
       <!-- the full word -->
       U
 
+      <!-- flairs on current location -->
+        <span 
+        *ngIf="current" 
+        [ngClass]="['utopia', 'overlay', 'overlay-' + current]"> 
+        {{ current }} 
+      </span>
+
       <!-- flairs on hover -->
       <span 
         *ngIf="flair" 
@@ -18,7 +25,7 @@
       <div 
         *ngFor="let l of letters"
         [ngClass]="['utopia', 'action', 'action-' + l.letter]" 
-        (click)="logoClick(l.route); flair = false;" 
+        (click)="logoClick(l.route);" 
         (mouseenter)="flair = l.letter;" 
         (mouseleave)="flair = false;">
     </div>

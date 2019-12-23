@@ -22,7 +22,7 @@ export class AccordionComponent {
     }
   }
 
-  constructor(private router: Router) { console.log(this); }
+  constructor(private router: Router) {}
 
   getItem(item: number | any) {
     const id = item.id | item;

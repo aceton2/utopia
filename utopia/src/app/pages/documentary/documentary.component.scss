@@ -1,0 +1,10 @@
+@import 'layout';
+
+.documentary {
+    @extend %page-simple;
+
+    .vimeo-video {
+        margin: 3rem 0 6rem 0;
+        overflow: hidden;
+    }
+}

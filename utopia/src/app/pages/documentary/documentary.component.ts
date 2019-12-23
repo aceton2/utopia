@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import Player from '@vimeo/player';
 
 @Component({
   selector: 'app-documentary',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentaryComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('vimeo', {static: true}) vimeoRef: ElementRef;
 
   ngOnInit() {
+    new Player(this.vimeoRef.nativeElement, {id: "262172747"});
   }
-
 }

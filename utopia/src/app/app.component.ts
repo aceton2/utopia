@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import { slideInAnimation } from './app.animations';
+import { fadeInOutAnimation } from './app.animations';
 import { Subscription } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
 
@@ -9,7 +9,7 @@ import { filter, tap } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [ 
-    slideInAnimation
+    fadeInOutAnimation
   ]
 })
 export class AppComponent implements OnInit, OnDestroy {

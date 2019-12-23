@@ -11,13 +11,13 @@ import { WorkshopsComponent } from './pages/workshops/workshops.component';
 
 
 const routes: Routes = [
-  { path: 'cover', component: CoverComponent, data: {animation: 'HomePage'} },
-  { path: 'contact', component: ContactComponent, data: {animation: 'AboutPage'} },
-  { path: 'documentary', component: DocumentaryComponent, data: {animation: 'FilterPage'} },
-  { path: 'idea', component: IdeaComponent },
-  { path: 'island', component: IslandComponent },
-  { path: 'show', component: ShowComponent },
-  { path: 'workshops', component: WorkshopsComponent },
+  { path: 'cover', component: CoverComponent, data: {animation: 'Page1'} },
+  { path: 'contact', component: ContactComponent, data: {animation: 'Page2'}},
+  { path: 'documentary', component: DocumentaryComponent, data: {animation: 'Page3'}},
+  { path: 'idea', component: IdeaComponent, data: {animation: 'Page4'} },
+  { path: 'island', component: IslandComponent, data: {animation: 'Page5'} },
+  { path: 'show', component: ShowComponent, data: {animation: 'Page6'} },
+  { path: 'workshops', component: WorkshopsComponent, data: {animation: 'Page7'} },
   { path: '**', redirectTo: 'cover'}
 ];
 

@@ -1,0 +1,17 @@
+<div class="soundcloud-container marB10">
+    <img [src]="imageSrc">
+    
+    <div class="controls">
+
+        <div class="button" (click)="toggle()">
+            <img src="assets/icons/pause-play-button.svg">
+        </div>
+
+        <div class="title"> first impressions </div>
+        <div #progress class="progress"> 
+            <div #bar class="bar"></div> 
+        </div>
+    </div>        
+    
+    <iframe allow="autoplay" style="display: none;" #soundFrame [src]="trackUrl"></iframe>
+</div>

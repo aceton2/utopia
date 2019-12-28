@@ -15,6 +15,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
+import { ScWidgetComponent } from './components/sc-widget/sc-widget.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AccordionComponent } from './components/accordion/accordion.component';
     MenuComponent,
     LogoComponent,
     FooterComponent,
-    AccordionComponent
+    AccordionComponent,
+    ScWidgetComponent
   ],
   imports: [
     BrowserModule,

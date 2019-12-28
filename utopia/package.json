@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.14",
     "@vimeo/player": "^2.10.0",
     "rxjs": "~6.4.0",
+    "soundcloud": "^3.3.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

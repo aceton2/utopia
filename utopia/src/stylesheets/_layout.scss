@@ -9,8 +9,21 @@ $sm-logo-height: 80px;
     width: 80%;
     max-width: 600px;
 
+    .quote {
+        letter-spacing: 0.1rem;
+        color: #993300;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .quote-author {
+        text-align: right;
+        color: #993300;
+    }
+
     img {
         margin-bottom: 4rem;
+        border-radius: 2px;
     }
 }
 

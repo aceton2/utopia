@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
-      tap( (event: NavigationEnd) => this.currentPath = event.url)
+      tap( (event: NavigationEnd) => this.currentPath = event.urlAfterRedirects)
     )
     .subscribe( ev => {
       const path = ev.url.split('#');

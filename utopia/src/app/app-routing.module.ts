@@ -7,7 +7,8 @@ import { IslandComponent } from './pages/island/island.component';
 import { IdeaComponent } from './pages/idea/idea.component';
 import { CoverComponent } from './pages/cover/cover.component';
 import { DocumentaryComponent } from './pages/documentary/documentary.component';
-import { WorkshopsComponent } from './pages/workshops/workshops.component';
+import { Y2016Component } from './pages/workshops/y2016/y2016.component';
+import { Y2017Component } from './pages/workshops/y2017/y2017.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path: 'idea', component: IdeaComponent, data: {animation: 'Page4'} },
   { path: 'island', component: IslandComponent, data: {animation: 'Page5'} },
   { path: 'show', component: ShowComponent, data: {animation: 'Page6'} },
-  { path: 'workshops', component: WorkshopsComponent, data: {animation: 'Page7'} },
+  { path: 'workshops', redirectTo: 'workshops/2017', data: {animation: 'Page7'} },
+  { path: 'workshops/2016', component: Y2016Component, data: {animation: 'Page8'} },
+  { path: 'workshops/2017', component: Y2017Component, data: {animation: 'Page9'} },
   { path: '**', redirectTo: 'cover'}
 ];
 

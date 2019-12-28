@@ -32,7 +32,8 @@ export class AccordionComponent {
 
   isItemActive(item: MenuItem, path: Array<string>) {
     const fragmentsMatch = item.fragment ? path[1] === item.fragment : true;
-    return path[0] === item.url && fragmentsMatch;
+    const urlMatch = path[0].indexOf(item.url) != -1;
+    return urlMatch && fragmentsMatch;
   }
 
   toggle(item: MenuItem) {

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import Player from '@vimeo/player';
 
 @Component({
@@ -6,11 +6,11 @@ import Player from '@vimeo/player';
   templateUrl: './documentary.component.html',
   styleUrls: ['./documentary.component.scss']
 })
-export class DocumentaryComponent implements OnInit {
+export class DocumentaryComponent implements AfterViewInit {
 
   @ViewChild('vimeo', {static: true}) vimeoRef: ElementRef;
 
-  ngOnInit() {
+  ngAfterViewInit() {
     new Player(this.vimeoRef.nativeElement, {id: "262172747"});
   }
 }

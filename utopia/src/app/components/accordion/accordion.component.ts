@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MenuTree, MenuItems, MenuItem } from './types/Menu';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { collapseAnimation } from './accordion.animations';
 
 @Component({
@@ -18,7 +18,8 @@ export class AccordionComponent {
 
   @Input() set currentPath(value: string) {
     if(value) {
-      this.menuItems.forEach( item => item.active = value.indexOf(item.url) != -1)
+      const path = value.split('#');
+      this.menuItems.forEach( item => item.active = this.isItemActive(item, path) );
     }
   }
 
@@ -29,9 +30,15 @@ export class AccordionComponent {
     return this.menuItems.find(item => item.id === id);
   }
 
+  isItemActive(item: MenuItem, path: Array<string>) {
+    const fragmentsMatch = item.fragment ? path[1] === item.fragment : true;
+    return path[0] === item.url && fragmentsMatch;
+  }
+
   toggle(item: MenuItem) {
     if(item.url) { 
-      setTimeout( () => this.router.navigate([item.url]), 100 ); 
+      const options: NavigationExtras = { fragment: item.fragment ? item.fragment : null };
+      setTimeout( () => this.router.navigate([item.url], options), 100 ); 
     }
   }
 }

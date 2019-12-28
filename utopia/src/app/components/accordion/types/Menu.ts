@@ -8,6 +8,7 @@ export interface MenuItem {
   id: number,
   name: string,
   url?: string,
+  fragment?: string,
   active?: boolean
 }
 

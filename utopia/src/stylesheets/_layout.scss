@@ -16,6 +16,18 @@ $sm-logo-height: 80px;
     width: 80%;
     max-width: 600px;
 
+
+    .poem {
+        padding-top: 1rem;
+        padding-bottom: 6rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.1rem;
+        text-align:center;
+        font-style: italic;
+        color: black;
+    }
+
     .quote {
         letter-spacing: 0.1rem;
         color: #993300;

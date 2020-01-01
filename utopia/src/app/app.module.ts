@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IdeaComponent } from './pages/idea/idea.component';
 import { IslandComponent } from './pages/island/island.component';
-import { ShowComponent } from './pages/show/show.component';
 import { DocumentaryComponent } from './pages/documentary/documentary.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CoverComponent } from './pages/cover/cover.component';
@@ -17,13 +16,14 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 import { ScWidgetComponent } from './components/sc-widget/sc-widget.component';
 import { Y2016Component } from './pages/workshops/y2016/y2016.component';
 import { Y2017Component } from './pages/workshops/y2017/y2017.component';
+import { Show17Component } from './pages/show/show17/show17.component';
+import { Show16Component } from './pages/show/show16/show16.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdeaComponent,
     IslandComponent,
-    ShowComponent,
     DocumentaryComponent,
     ContactComponent,
     CoverComponent,
@@ -31,9 +31,11 @@ import { Y2017Component } from './pages/workshops/y2017/y2017.component';
     LogoComponent,
     FooterComponent,
     AccordionComponent,
+    ScWidgetComponent,
     Y2016Component,
     Y2017Component,
-    ScWidgetComponent
+    Show17Component,
+    Show16Component
   ],
   imports: [
     BrowserModule,

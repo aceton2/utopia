@@ -1,0 +1,9 @@
+@import 'layout';
+
+:host {
+    @extend %page-host;
+}
+
+.show {
+    @extend %page;
+}

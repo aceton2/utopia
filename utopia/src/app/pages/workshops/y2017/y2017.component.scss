@@ -1,6 +1,10 @@
 @import 'layout';
 @import 'mixins';
 
+:host {
+    @extend %page-host;
+}
+
 .workshops {
     @extend %page;
 

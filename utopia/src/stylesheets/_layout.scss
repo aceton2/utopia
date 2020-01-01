@@ -2,8 +2,15 @@
 $header-margin: 10vh;
 $sm-logo-height: 80px;
 
+//page container
+%page-host {
+    display: block;
+    width: 100%;
+}
+
 // basic page
 %page {    
+
     word-wrap: break-word;
 
     width: 80%;

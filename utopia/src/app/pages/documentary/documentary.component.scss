@@ -1,5 +1,9 @@
 @import 'layout';
 
+:host {
+    @extend %page-host;
+}
+
 .documentary {
     @extend %page-simple;
 

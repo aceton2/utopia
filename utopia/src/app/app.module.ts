@@ -14,10 +14,10 @@ import { LogoComponent } from './components/logo/logo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { ScWidgetComponent } from './components/sc-widget/sc-widget.component';
-import { Y2016Component } from './pages/workshops/y2016/y2016.component';
-import { Y2017Component } from './pages/workshops/y2017/y2017.component';
 import { Show17Component } from './pages/show/show17/show17.component';
 import { Show16Component } from './pages/show/show16/show16.component';
+import { Work17Component } from './pages/workshops/work17/work17.component';
+import { Work16Component } from './pages/workshops/work16/work16.component';
 
 @NgModule({
   declarations: [
@@ -32,10 +32,10 @@ import { Show16Component } from './pages/show/show16/show16.component';
     FooterComponent,
     AccordionComponent,
     ScWidgetComponent,
-    Y2016Component,
-    Y2017Component,
     Show17Component,
-    Show16Component
+    Show16Component,
+    Work17Component,
+    Work16Component
   ],
   imports: [
     BrowserModule,

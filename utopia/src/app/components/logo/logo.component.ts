@@ -18,8 +18,8 @@ export class LogoComponent {
   current: boolean | string;
 
   @Input() set currentPath(value: string) {
-    this.current = false; // to trigger animation
-    setTimeout( () => this.setCurrent(value), 500);
+    const newCurrent = this.getCurrent(value);
+    if(newCurrent != this.current) { this.animateChange(newCurrent) }
   }
 
   letters = [
@@ -35,9 +35,14 @@ export class LogoComponent {
     private router: Router
   ) {}
 
-  setCurrent(path: string) {
-    const l = this.letters.find( l => l.route === path);
-    this.current = l ? l.letter : false;
+  getCurrent(path: string) {
+    const l = this.letters.find( l => path.indexOf(l.route) != -1);
+    return l ? l.letter : false;
+  }
+
+  animateChange(newCurrent) {
+    this.current = false; // to trigger animation
+    setTimeout( () => this.current = newCurrent, 500);
   }
 
   logoClick(route:string) {

@@ -25,10 +25,10 @@ export class MenuComponent {
     { id: 8, name: '2016', url: '/workshops/2016'  },
     { id: 9, name: '2017', url: '/show/2017', active: false },
     { id: 10, name: '2016', url: '/show/2016', active: false },
-    { id: 11, name: 'Berlin', url: '#' },
-    { id: 12, name: 'Tiblisi', url: '#'  },
-    { id: 13, name: 'Baku', url: '#' },
-    { id: 14, name: 'Yerevan', url: '#'  },
+    { id: 11, name: 'Berlin', url: '/show/2017', fragment: 'berlin' },
+    { id: 12, name: 'Tbilisi', url: '/show/2017', fragment: 'tbilisi' },
+    { id: 13, name: 'Baku', url: '/show/2017', fragment: 'baku' },
+    { id: 14, name: 'Yerevan', url: '/show/2017', fragment: 'yerevan' },
   ];
 
   menuTree: MenuTree = [

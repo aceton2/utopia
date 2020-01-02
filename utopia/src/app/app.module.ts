@@ -18,6 +18,7 @@ import { Show17Component } from './pages/show/show17/show17.component';
 import { Show16Component } from './pages/show/show16/show16.component';
 import { Work17Component } from './pages/workshops/work17/work17.component';
 import { Work16Component } from './pages/workshops/work16/work16.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { Work16Component } from './pages/workshops/work16/work16.component';
     Show17Component,
     Show16Component,
     Work17Component,
-    Work16Component
+    Work16Component,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

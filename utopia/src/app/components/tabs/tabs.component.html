@@ -1,0 +1,9 @@
+
+<div
+    *ngFor="let year of ['2016', '2017', '2018']; index as i"
+    [ngClass]="['tab', 'tab-' + i]"
+    [routerLink]="'/' + branch + '/' + year" 
+    routerLinkActive="active-link">
+    
+    <div class="name"> {{ year }} </div>
+</div>

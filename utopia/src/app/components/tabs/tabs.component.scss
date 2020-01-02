@@ -1,0 +1,52 @@
+@import 'mixins';
+
+$tab-width: 13rem;
+$tab-height: 5rem;
+$tab-offest: -2.5em;
+
+:host {
+    display: block;
+    margin-bottom: 4rem;
+}
+
+@include respond-to('lg') {
+    :host {
+        display: none;
+    }
+}
+
+.tab {    
+    position: relative;
+    display: inline-block;    
+    width: $tab-width;
+    height: calc( #{$tab-height} - 1rem);
+
+    background-image: url(/assets/icons/tab.svg);
+    background-size: $tab-width $tab-height;
+    cursor: pointer;
+
+    .name {
+        font-size: 1.2rem;
+        box-sizing: border-box;
+        padding: 1em 0 0 3rem;        
+    }
+
+    &.active-link {
+        font-weight: bold;
+        cursor: default;
+    }
+}
+
+.tab-0 {
+    z-index: 3;
+}
+
+.tab-1 {
+    left: $tab-offest;
+    z-index: 2;
+}
+
+.tab-2 {
+    left: #{$tab-offest * 2};
+    z-index: 1;
+}

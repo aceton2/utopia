@@ -1,5 +1,4 @@
 @import 'layout';
-@import 'mixins';
 
 :host {
     @extend %page-host;
@@ -27,11 +26,5 @@
 
         padding: 7rem 0 0 0;
         float: left;
-    }
-
-    @include respond-to('lg') {
-        .tab-menu {
-            display: none;
-        }
     }
 }

@@ -9,7 +9,7 @@ $tab-offest: -2.5em;
     margin-bottom: 4rem;
 }
 
-@include respond-to('lg') {
+@include respond-to('md') {
     :host {
         display: none;
     }

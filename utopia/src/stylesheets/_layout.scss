@@ -1,21 +1,25 @@
+@import 'mixins';
 
 $header-margin: 10vh;
 $sm-logo-height: 80px;
-
-//page container
-%page-host {
-    display: block;
-    width: 100%;
-}
 
 // basic page
 %page {    
 
     word-wrap: break-word;
+    box-sizing: border-box;
 
-    width: 80%;
-    max-width: 600px;
+    width: 100%;
+    padding: 0 2em;
 
+    @include respond-to('md') { 
+        width: 500px; 
+        padding: 0;
+    }
+
+    @include respond-to('lg') { 
+        width: 600px; 
+    }
 
     .poem {
         padding-top: 1rem;

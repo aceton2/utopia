@@ -36,7 +36,7 @@ export class LogoComponent {
   ) {}
 
   getCurrent(path: string) {
-    const l = this.letters.find( l => path.indexOf(l.route) != -1);
+    const l = path ? this.letters.find( l => path.indexOf(l.route) != -1) : false;
     return l ? l.letter : false;
   }
 

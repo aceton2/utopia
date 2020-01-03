@@ -1,8 +1,16 @@
 @import 'layout';
+@import 'mixins';
 
 :host {
     font-size: 1.2rem;
     letter-spacing: 1px;
+    display: none;
+}
+
+@include respond-to('md') {
+    :host {
+        display: inherit;
+    }
 }
 
 .placeholder {

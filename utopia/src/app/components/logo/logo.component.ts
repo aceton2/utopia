@@ -13,13 +13,15 @@ import { showHideAnimation } from './logo.animations';
 })
 export class LogoComponent {
 
+  @Input() static;
+
   routeSubscription: Subscription;
   flair: boolean | string;
   current: boolean | string;
 
   @Input() set currentPath(value: string) {
-    const newCurrent = this.getCurrent(value);
-    if(newCurrent != this.current) { this.animateChange(newCurrent) }
+    const newLetter = this.findLetter(value);
+    if(newLetter != this.current) { this.animateChange(newLetter) }
   }
 
   letters = [
@@ -35,17 +37,18 @@ export class LogoComponent {
     private router: Router
   ) {}
 
-  getCurrent(path: string) {
+  findLetter(path: string) {
     const l = path ? this.letters.find( l => path.indexOf(l.route) != -1) : false;
     return l ? l.letter : false;
   }
 
-  animateChange(newCurrent) {
-    this.current = false; // to trigger animation
-    setTimeout( () => this.current = newCurrent, 500);
+  animateChange(newLetter) {
+    this.current = false;
+    setTimeout( () => this.current = newLetter, 500);
   }
 
   logoClick(route:string) {
-    this.router.navigate([route]);
+    const routeTo = this.static ? '/cover' : route;
+    this.router.navigate([routeTo]);
   }
 }

@@ -18,7 +18,7 @@
       <!-- flairs on hover -->
       <span 
         @showHideAnimation
-        *ngIf="flair" 
+        *ngIf="flair && !static" 
         [ngClass]="['utopia', 'overlay', 'overlay-' + flair]"> 
         {{ flair }} 
       </span>

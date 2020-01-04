@@ -13,7 +13,7 @@ import { Work17Component } from './pages/workshops/work17/work17.component';
 
 
 const routes: Routes = [
-  { path: 'cover', component: CoverComponent, data: {animation: 'Page1'} },
+  { path: '', component: CoverComponent, data: {animation: 'cover'} },
   { path: 'contact', component: ContactComponent, data: {animation: 'Page2'}},
   { path: 'documentary', component: DocumentaryComponent, data: {animation: 'Page3'}},
   { path: 'idea', component: IdeaComponent, data: {animation: 'Page4'} },
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'workshops', redirectTo: 'workshops/2017', data: {animation: 'Page7'} },
   { path: 'workshops/2017', component: Work17Component, data: {animation: 'Page9'} },
   { path: 'workshops/2016', component: Work16Component, data: {animation: 'Page8'} },
-  { path: '**', redirectTo: 'cover'}
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

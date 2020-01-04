@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
   currentPath: string;
-  
+
   constructor(private router: Router, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {

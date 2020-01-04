@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { showHideAnimation } from './logo.animations';
@@ -24,13 +24,15 @@ export class LogoComponent {
     if(newLetter != this.current) { this.animateChange(newLetter) }
   }
 
+  @Output() labelSelected: EventEmitter<string> = new EventEmitter();
+
   letters = [
-    { letter: 'u', route: '/idea' },
-    { letter: 't', route: '/island' },
-    { letter: 'o', route: '/workshops' },
-    { letter: 'p', route: '/show' },
-    { letter: 'i', route: '/documentary' },
-    { letter: 'a', route: '/contact' }
+    { letter: 'u', route: '/idea', label: 'the idea'},
+    { letter: 't', route: '/island', label: 'the island'},
+    { letter: 'o', route: '/workshops', label: 'the workshops'},
+    { letter: 'p', route: '/show', label: 'the show'},
+    { letter: 'i', route: '/documentary', label: 'documentary'},
+    { letter: 'a', route: '/contact', label: 'contact'}
   ]
   
   constructor(
@@ -48,7 +50,10 @@ export class LogoComponent {
   }
 
   logoClick(route:string) {
-    const routeTo = this.static ? '/cover' : route;
-    this.router.navigate([routeTo]);
+    this.router.navigate([this.static ? '' : route]);
+  }
+
+  emitLabel(label?: string) {
+    this.labelSelected.emit(label);
   }
 }

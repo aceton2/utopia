@@ -1,10 +1,11 @@
 
-// xl would be 1200
+// Breakpoints
 
 $breakpoints: (
     'sm':  ( min-width:  600px ),
     'md':  ( min-width:  767px ),
     'lg': ( min-width:  992px )
+    // 'xl': ( min-width:  1200px )
   ) !default;
 
 

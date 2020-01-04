@@ -1,1 +1,6 @@
-<p>cover works!</p>
+<div #background class="background"></div>
+<div class="logo-box">
+    <div> design your </div>
+    <app-logo (labelSelected)="updateLabel($event)"></app-logo>
+    <div class="section-name"> {{ label }}</div>
+</div>

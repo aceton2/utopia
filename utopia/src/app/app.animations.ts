@@ -1,18 +1,44 @@
 import {
     trigger,
-    state,
     query,
     style,
     animate,
-    transition,
-    animateChild,
-    group
+    transition
   } from '@angular/animations';
+
+
+function transitionDoesNotInvolveCover(fromState: string, toState: string) {
+  return fromState !== 'cover' && toState !== 'cover';
+}
 
 export const fadeInOutAnimation =
   trigger('fadeInOutAnimation', [
 
-    transition('* <=> *', [
+    transition('cover => *', [
+
+      query(':enter', [
+        style({ opacity: '0'}),
+      ], { optional: true }),
+
+      query(':leave', [
+          style({ opacity: '1'}),
+          animate('500ms 0ms ease-in-out', style({ opacity: '0' }))
+      ], { optional: true }),
+    ]),
+
+    transition('* => cover', [
+
+      query(':enter', [
+        style({ opacity: '0'}),
+      ], { optional: true }),
+
+      query(':enter', [
+        animate('500ms 0ms ease-in-out', style({ opacity: '1' }))
+      ], { optional: true })
+
+    ]),
+
+    transition(transitionDoesNotInvolveCover, [
 
       query(':enter', [
         style({ opacity: '0', position: 'absolute'}),

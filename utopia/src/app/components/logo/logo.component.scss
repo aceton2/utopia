@@ -1,4 +1,5 @@
 
+$cover-font-size: 20vw;
 
 .utopia {
     font-family: 'Utopia', sans-serif;
@@ -15,6 +16,15 @@
 
         position:relative;     
         width:100%; 
+
+        &.cover {
+            color: white;
+            font-size: $cover-font-size;
+
+            span {
+                font-size: $cover-font-size;
+            }
+        }
 
         .overlay { 
             position:absolute; 

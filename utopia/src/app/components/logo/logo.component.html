@@ -2,7 +2,7 @@
 <div class="logoText designYour " *ngIf="isHome">design your</div>
 
 <div class="logo utopia">
-  <div class="word">
+  <div class="word" [ngClass]="{'cover': !static}">
 
       <!-- the full word -->
       U
@@ -28,8 +28,8 @@
         *ngFor="let l of letters"
         [ngClass]="['utopia', 'action', 'action-' + l.letter]" 
         (click)="logoClick(l.route);" 
-        (mouseenter)="flair = l.letter;" 
-        (mouseleave)="flair = false;">
+        (mouseenter)="flair = l.letter; emitLabel(l.label);" 
+        (mouseleave)="flair = false; emitLabel();">
     </div>
   </div>
 </div>

@@ -1,7 +1,10 @@
 
+<app-header-bar [currentPath]="currentPath" (toggleMenu)="showSideMenu = !showSideMenu"></app-header-bar>
+
 <div class="main-layout">
 
-  <app-menu [currentPath]="currentPath"></app-menu>
+  <app-menu [currentPath]="currentPath" *ngIf="showSideMenu" class="floating-menu"></app-menu>
+  <app-menu [currentPath]="currentPath" class="static-menu"></app-menu>
 
   <div [@fadeInOutAnimation]="prepareRoute(outlet)" class="pages">
     <router-outlet #outlet="outlet"></router-outlet>

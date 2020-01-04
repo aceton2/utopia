@@ -1,9 +1,16 @@
+@import 'mixins';
 
 $cover-font-size: 20vw;
+$header-font-size: 4rem;
 
 .utopia {
     font-family: 'Utopia', sans-serif;
-    font-size: 58px;
+    font-size: $header-font-size;
+    line-height: 5rem;
+    
+    @include respond-to('md') {
+        font-size: 58px;
+    }
 }
   
 .logo {

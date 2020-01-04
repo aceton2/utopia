@@ -4,13 +4,6 @@
 :host {
     font-size: 1.2rem;
     letter-spacing: 1px;
-    display: none;
-}
-
-@include respond-to('md') {
-    :host {
-        display: inherit;
-    }
 }
 
 .placeholder {
@@ -24,5 +17,8 @@
 
     .logo {
         height: $sm-logo-height;
+        display: none;
+
+        @include respond-to('md') { display: inherit; }
     }
 }

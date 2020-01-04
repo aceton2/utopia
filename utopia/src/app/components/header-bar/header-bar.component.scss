@@ -1,0 +1,26 @@
+
+$header-height: 5rem;
+
+.header {
+    position: fixed;
+    height: $header-height;
+    width: 100%;
+    background: white;
+    border-bottom: 2px solid #333;
+    text-align: center;   
+    
+    div {
+        cursor: pointer;
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        height: $header-height;
+        width: $header-height;
+    }
+}
+
+.margin {
+    height: $header-height + 1rem;
+}

@@ -1,6 +1,22 @@
+@import 'mixins';
+
+app-header-bar {
+    @include respond-to('md') {
+        display: none;
+    }
+}
+
+// .floating-menu {
+//     position: absolute;
+// }
 
 .main-layout {
     display: flex;
+
+    .static-menu {
+        display: none;
+        @include respond-to('md') { display: inherit; }
+    }
 
     .pages {
         flex: 1;

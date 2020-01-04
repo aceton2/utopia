@@ -17,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
   currentPath: string;
+  showSideMenu: boolean = false;
 
   constructor(private router: Router, private viewportScroller: ViewportScroller) {}
 

@@ -1,3 +1,13 @@
+@import 'mixins';
+
+.hide-sm-down {
+    display: none;
+    @include respond-to('md') { display: inherit }
+}
+
+.hide-md-up {
+    @include respond-to('md') { display: none; }
+}
 
 .center { margin:auto; }
 

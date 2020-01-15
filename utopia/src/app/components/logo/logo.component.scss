@@ -1,12 +1,12 @@
 @import 'mixins';
+@import 'layout';
 
 $cover-font-size: 20vw;
-$header-font-size: 4rem;
 
 .utopia {
     font-family: 'Utopia', sans-serif;
     font-size: $header-font-size;
-    line-height: 5rem;
+    line-height: $header-height;
     
     @include respond-to('md') {
         font-size: 58px;
@@ -27,15 +27,17 @@ $header-font-size: 4rem;
         &.cover {
             color: white;
             font-size: $cover-font-size;
+            line-height: $cover-font-size;
 
             span {
                 font-size: $cover-font-size;
+                line-height: $cover-font-size;
             }
         }
 
         .overlay { 
             position:absolute; 
-            z-index:2; 
+            z-index: $z-index-cover + 1; 
             pointer-events:none; 
 
             &.overlay-u { left:-8%; color:#ffd7d7; }
@@ -48,7 +50,7 @@ $header-font-size: 4rem;
 
         .action {
             position:absolute; 
-            z-index:5; 
+            z-index: $z-index-cover + 2; 
             display:inline-block; 
             height:100%;
             cursor: pointer;

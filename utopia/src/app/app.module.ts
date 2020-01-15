@@ -20,6 +20,7 @@ import { Work17Component } from './pages/workshops/work17/work17.component';
 import { Work16Component } from './pages/workshops/work16/work16.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { HeaderBarComponent } from './components/header-bar/header-bar.component';
+import { FloatMenuComponent } from './components/float-menu/float-menu.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HeaderBarComponent } from './components/header-bar/header-bar.component
     Work17Component,
     Work16Component,
     TabsComponent,
-    HeaderBarComponent
+    HeaderBarComponent,
+    FloatMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,22 @@
 @import 'layout';
 @import 'mixins';
 
-:host {
+.menu {
     font-size: 1.2rem;
     letter-spacing: 1px;
-}
 
-.placeholder {
-    border-right: 230px solid white;
-}
+    .menu-box {        
+        
+        margin: 2rem 3rem;
 
-.menu-box {
+        @include respond-to('md') { 
+            margin: $header-margin 3rem 0;
+            position: fixed;
+        }
 
-    position: fixed;
-    margin: $header-margin 30px 0px;
-
-    .logo {
-        height: $sm-logo-height;
-        display: none;
-
-        @include respond-to('md') { display: inherit; }
+        .logo {
+            height: $sm-logo-height;
+        }
     }
+
 }

@@ -1,0 +1,21 @@
+@import 'layout';
+
+.floating-menu {
+    position: fixed; 
+    background: white;
+    height: 100%;
+    width: 66vw;
+    z-index: 10;
+    top: $header-height + 0.2rem; // additional for border
+}
+
+.backdrop {
+    position: fixed;
+    background: #333;
+    opacity: 0.2;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

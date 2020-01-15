@@ -17,13 +17,14 @@ export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
   currentPath: string;
-  showSideMenu: boolean = false;
+  showFloatingMenu: boolean = false;
 
   constructor(private router: Router, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
     this.subscription = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
+      tap( () => this.closeFloatingMenu() ),
       tap( (event: NavigationEnd) => this.currentPath = event.urlAfterRedirects)
     )
     .subscribe( ev => {
@@ -34,6 +35,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  closeFloatingMenu() {
+    setTimeout( () => this.showFloatingMenu = false, 500);
   }
 
   prepareRoute(outlet: RouterOutlet) {

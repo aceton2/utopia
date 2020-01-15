@@ -1,8 +1,8 @@
-
-$header-height: 5rem;
+@import 'layout';
 
 .header {
     position: fixed;
+    z-index: $z-index-header-bar;
     height: $header-height;
     width: 100%;
     background: white;

@@ -1,8 +1,9 @@
-@import 'mixins';
+@import 'layout';
 
-$tab-width: 13rem;
+$tab-width: 10rem;
 $tab-height: 5rem;
-$tab-offest: -2.5em;
+$tab-offest: -2.5rem;
+$tab-font-size: 1.2rem;
 
 :host {
     display: block;
@@ -24,9 +25,9 @@ $tab-offest: -2.5em;
     cursor: pointer;
 
     .name {
-        font-size: 1.2rem;
+        font-size: $tab-font-size;
         box-sizing: border-box;
-        padding: 1em 0 0 3rem;        
+        padding: 1em 0 0 2rem;        
     }
 
     &.active-link {
@@ -36,15 +37,15 @@ $tab-offest: -2.5em;
 }
 
 .tab-0 {
-    z-index: 3;
+    z-index: $z-index-tabs-base + 2;
 }
 
 .tab-1 {
     left: $tab-offest;
-    z-index: 2;
+    z-index: $z-index-tabs-base + 1;
 }
 
 .tab-2 {
-    left: #{$tab-offest * 2};
-    z-index: 1;
+    left: $tab-offest * 2;
+    z-index: $z-index-tabs-base;
 }

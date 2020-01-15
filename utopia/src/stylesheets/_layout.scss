@@ -1,7 +1,18 @@
 @import 'mixins';
 
-$header-margin: 10vh;
+$z-index-cover: 20;
+$z-index-tabs-base: 1;
+$z-index-header-bar: 10;
+
+// header bar
+$header-height: 5rem; 
+$header-font-size: 4rem;
+
+// logo
 $sm-logo-height: 80px;
+
+// page
+$header-margin: 10vh;
 
 // basic page
 %page {    

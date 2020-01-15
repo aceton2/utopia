@@ -22,7 +22,7 @@ export const fadeInOutAnimation =
 
       query(':leave', [
           style({ opacity: '1'}),
-          animate('500ms 0ms ease-in-out', style({ opacity: '0' }))
+          animate('500ms 500ms ease-in-out', style({ opacity: '0' }))
       ], { optional: true }),
     ]),
 

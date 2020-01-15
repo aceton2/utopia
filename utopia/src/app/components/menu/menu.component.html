@@ -1,19 +1,21 @@
 
-<div class="placeholder"></div>
+<div class="menu">
 
-<div class="menu-box">
+    <div class="menu-box">
 
-    <div class="logo">
-        <app-logo
+        <div class="logo hide-sm-down">
+            <app-logo
+                [currentPath]="currentPath"
+                [static]="true">
+            </app-logo>
+        </div>
+
+        <accordion 
             [currentPath]="currentPath"
-            [static]="true">
-        </app-logo>
+            [menuItems]="menuItems"
+            [menuTree]="menuTree">
+        </accordion>
+
     </div>
-
-    <accordion 
-        [currentPath]="currentPath"
-        [menuItems]="menuItems"
-        [menuTree]="menuTree">
-    </accordion>
-
+    
 </div>

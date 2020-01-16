@@ -7,13 +7,13 @@
       {{ i1.name }} </div>
 
     <!-- 2 -->
-    <div *ngIf="getItem(tree1).active" @collapseAnimation>
+    <div *ngIf="getItem(tree1).active">
       <ul *ngFor="let tree2 of tree1.children" class="submenu">      
         <div class="menu-label" *ngIf="getItem(tree2) as i2" [class.active]="i2.active" (click)="toggle(i2)"> 
           {{ i2.name }} </div>
 
         <!-- 3 -->
-        <div *ngIf="getItem(tree1).active && getItem(tree2).active" @collapseAnimation>
+        <div *ngIf="getItem(tree1).active && getItem(tree2).active">
           <li *ngFor="let tree3 of tree2.children" class="submenu submenu2">        
             <div class="menu-label" *ngIf="getItem(tree3) as i3" [class.active]="i3.active" (click)="toggle(i3)"> 
               {{ i3.name }} </div>

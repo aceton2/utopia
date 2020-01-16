@@ -7,7 +7,7 @@
 
     .menu-box {        
         
-        margin: 2rem 3rem;
+        margin: 2rem;
 
         @include respond-to('md') { 
             margin: $header-margin 3rem 0;

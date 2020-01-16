@@ -6,6 +6,7 @@
 </app-header-bar>
 
 <app-float-menu 
+  @drawerAnimation
   class="hide-md-up"
   *ngIf="showFloatingMenu" 
   (closeMenu)="showFloatingMenu = false">
@@ -16,7 +17,7 @@
   <div class="static-menu hide-sm-down">
     <app-menu [currentPath]="currentPath"></app-menu>
   </div>
-
+  
   <div [@fadeInOutAnimation]="prepareRoute(outlet)" class="pages">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>

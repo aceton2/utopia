@@ -46,7 +46,7 @@ export class LogoComponent {
 
   animateChange(newLetter) {
     this.current = false;
-    setTimeout( () => this.current = newLetter, 500);
+    setTimeout( () => this.current = newLetter, 0);
   }
 
   logoClick(route:string) {

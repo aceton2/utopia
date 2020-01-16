@@ -10,6 +10,7 @@ import { Show17Component } from './pages/show/show17/show17.component';
 import { Show16Component } from './pages/show/show16/show16.component';
 import { Work16Component } from './pages/workshops/work16/work16.component';
 import { Work17Component } from './pages/workshops/work17/work17.component';
+import { Show18Component } from './pages/show/show18/show18.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'documentary', component: DocumentaryComponent, data: {animation: 'Page3'}},
   { path: 'idea', component: IdeaComponent, data: {animation: 'Page4'} },
   { path: 'island', component: IslandComponent, data: {animation: 'Page5'} },
-  { path: 'show', redirectTo: 'show/2017', data: {animation: 'Page10'} },
+  { path: 'show', redirectTo: 'show/2018', data: {animation: 'Page10'} },
+  { path: 'show/2018', component: Show18Component, data: {animation: 'Page12'} },
   { path: 'show/2017', component: Show17Component, data: {animation: 'Page6'} },
   { path: 'show/2016', component: Show16Component, data: {animation: 'Page11'} },
   { path: 'workshops', redirectTo: 'workshops/2017', data: {animation: 'Page7'} },

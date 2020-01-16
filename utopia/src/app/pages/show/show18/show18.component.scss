@@ -1,0 +1,15 @@
+@import 'layout';
+
+.show {
+    @extend %page;
+}
+
+.wide {
+    height: 90px;
+    object-fit: cover;
+}
+
+.offToLeft {
+    position: relative;
+    left: -2em;
+}

@@ -16,4 +16,11 @@
             text-align: justify;
         }
     }
+
+    .logo {
+        object-fit: contain;
+        height: 150px;
+        margin-top: -5rem;
+        margin-bottom: -1.5rem;
+    }
 }

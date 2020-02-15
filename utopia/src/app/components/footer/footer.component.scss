@@ -3,16 +3,23 @@
     margin-bottom: 6rem;
     text-align: center;
 
+    letter-spacing: 0.2rem;   
+    font-size: 1.3rem;
+            
+    a {
+        font-weight: normal;
+        color: #333;
+    }
 
     .page-up {
-        width: 96px;
-        height: 96px;
+        width: 40px;
+        height: 40px;
         margin: 0 auto;
         cursor: pointer;
     }
 
     hr {
-        margin: 3rem 0 0 0;
+        margin: 1rem 0 0 0;
         background: #e8e8e8;
         height: 1px;
         padding: 0;
@@ -21,7 +28,6 @@
 
     .footer-text {
         padding: 1rem 0rem 0rem 0rem;
-        font-size: 1.3rem;
     }
 
     .facebook-text {
@@ -35,6 +41,7 @@
             vertical-align: top;
             margin-bottom: 0;
             margin-right: 0.4rem;
+            filter: hue-rotate(45deg);
         }
     }
 

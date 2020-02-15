@@ -15,7 +15,7 @@ export class MenuComponent {
     { id: 1, name: 'the island', active: false, url: '/island' },
     { id: 2, name: 'the workshops', active: false, url: '/workshops'  },
     { id: 3, name: 'the show', active: false,  url: '/show' },
-    { id: 18, name: 'documentary', active: false,  url: '/documentary' },
+    { id: 18, name: 'the network', active: false,  url: '/network' },
     { id: 17, name: 'contact', active: false,  url: '/contact' },
     { id: 4, name: 'activities', url: '/island', fragment: 'activities' },
     { id: 5, name: 'self-organization', url: '/island', fragment: 'organization' },

@@ -16,7 +16,7 @@ import { Show18Component } from './pages/show/show18/show18.component';
 const routes: Routes = [
   { path: '', component: CoverComponent, data: {animation: 'cover'} },
   { path: 'contact', component: ContactComponent, data: {animation: 'Page2'}},
-  { path: 'documentary', component: DocumentaryComponent, data: {animation: 'Page3'}},
+  { path: 'network', component: DocumentaryComponent, data: {animation: 'Page3'}},
   { path: 'idea', component: IdeaComponent, data: {animation: 'Page4'} },
   { path: 'island', component: IslandComponent, data: {animation: 'Page5'} },
   { path: 'show', redirectTo: 'show/2018', data: {animation: 'Page10'} },

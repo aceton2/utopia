@@ -31,7 +31,7 @@ export class LogoComponent {
     { letter: 't', route: '/island', label: 'the island'},
     { letter: 'o', route: '/workshops', label: 'the workshops'},
     { letter: 'p', route: '/show', label: 'the show'},
-    { letter: 'i', route: '/documentary', label: 'documentary'},
+    { letter: 'i', route: '/network', label: 'the network'},
     { letter: 'a', route: '/contact', label: 'contact'}
   ]
   

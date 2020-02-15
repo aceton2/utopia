@@ -29,8 +29,12 @@
             background: #333;
             width: 3em;
             height: 3em;
-            padding: 0.2em;
-            border-radius: 2px;
+            padding: 0.5em;
+            border-radius: 4em;
+
+            &:active {
+                opacity: 0.8;
+            }
         }
 
         .title {

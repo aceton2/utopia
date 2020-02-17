@@ -2,27 +2,13 @@
 @import 'mixins';
 
 .workshops {
-    @extend %page;
+    @extend %page-workshop;
 
-    .side-text{
-        @include respond-to('md') {
-            width: 40%;
-            box-sizing: border-box;
-            padding-right: 4rem;
-            margin: 0 0 8rem 0;
-            float:left;
-        }        
+    .content-images-01 {
+        margin-left: 10%;
     }
 
-    .side-text-heading {
-        padding: 0 0 1.3rem 0;
+    .content-images-02 {
+        margin-left: 40%;
     }
-
-    .side-images {
-        width: 60%;
-        box-sizing: border-box;
-
-        padding: 7rem 0 0 0;
-        float: left;
-    } 
 }

@@ -22,6 +22,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { HeaderBarComponent } from './components/header-bar/header-bar.component';
 import { FloatMenuComponent } from './components/float-menu/float-menu.component';
 import { Show18Component } from './pages/show/show18/show18.component';
+import { Work18Component } from './pages/workshops/work18/work18.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { Show18Component } from './pages/show/show18/show18.component';
     TabsComponent,
     HeaderBarComponent,
     FloatMenuComponent,
-    Show18Component
+    Show18Component,
+    Work18Component
   ],
   imports: [
     BrowserModule,

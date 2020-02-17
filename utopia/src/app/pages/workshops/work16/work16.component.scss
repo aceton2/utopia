@@ -1,26 +1,5 @@
 @import 'layout';
 
 .workshops {
-    @extend %page;
-
-    .side-text {
-        width: 40%;
-        box-sizing: border-box;
-
-        padding-right: 4rem;
-        margin: 0 0 8rem 0;
-        float: left;
-    }
-
-    .side-text-heading {
-        padding: 0 0 1.3rem 0;
-    }
-
-    .side-images {
-        width: 60%;
-        box-sizing: border-box;
-
-        padding: 7rem 0 0 0;
-        float: left;
-    }
+    @extend %page-workshop;
 }

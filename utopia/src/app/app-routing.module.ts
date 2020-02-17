@@ -11,6 +11,7 @@ import { Show16Component } from './pages/show/show16/show16.component';
 import { Work16Component } from './pages/workshops/work16/work16.component';
 import { Work17Component } from './pages/workshops/work17/work17.component';
 import { Show18Component } from './pages/show/show18/show18.component';
+import { Work18Component } from './pages/workshops/work18/work18.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'show/2018', component: Show18Component, data: {animation: 'Page12'} },
   { path: 'show/2017', component: Show17Component, data: {animation: 'Page6'} },
   { path: 'show/2016', component: Show16Component, data: {animation: 'Page11'} },
-  { path: 'workshops', redirectTo: 'workshops/2017', data: {animation: 'Page7'} },
+  { path: 'workshops', redirectTo: 'workshops/2018', data: {animation: 'Page7'} },
+  { path: 'workshops/2018', component: Work18Component, data: {animation: 'Page9'} },
   { path: 'workshops/2017', component: Work17Component, data: {animation: 'Page9'} },
   { path: 'workshops/2016', component: Work16Component, data: {animation: 'Page8'} },
   { path: '**', redirectTo: ''}

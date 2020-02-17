@@ -6,7 +6,6 @@
     height: $header-height;
     width: 100%;
     background: white;
-    // border-bottom: 2px solid #333;
     text-align: center;   
     
     div {
@@ -15,9 +14,14 @@
 
     img {
         position: absolute;
-        left: 0;
-        height: $header-height;
-        width: $header-height;
+        left: 15px;
+        height: 3rem;
+        width: 3rem;
+        top: 1rem;
+        
+        &:active {
+            filter: blur(1px);
+        }
     }
 }
 

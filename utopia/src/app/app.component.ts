@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
-import { fadeInOutAnimation, drawerAnimation } from './app.animations';
+import { fadeInOutAnimation } from './app.animations';
 import { Subscription } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
 import { ViewportScroller } from '@angular/common';
@@ -9,8 +9,7 @@ import { ViewportScroller } from '@angular/common';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [ 
-    drawerAnimation,
+  animations: [
     fadeInOutAnimation
   ]
 })
@@ -30,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
     )
     .subscribe( ev => {
       const path = ev.url.split('#');
-      path[1] ? this.viewportScroller.scrollToAnchor(path[1]) : null;
+      path[1] ? this.viewportScroller.scrollToAnchor(path[1]) : this.viewportScroller.scrollToPosition([0, 0]);
     })
   }
 

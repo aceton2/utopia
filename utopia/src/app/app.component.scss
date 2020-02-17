@@ -1,9 +1,10 @@
+@import 'layout';
+
 .main-layout {
     display: flex;
 
     .static-menu {  
-        background: white;
-        width: 228px; // ideally not neccesary      
+        background: white;    
     }
 
     .pages {

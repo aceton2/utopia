@@ -4,6 +4,10 @@ $z-index-cover: 20;
 $z-index-tabs-base: 1;
 $z-index-header-bar: 10;
 
+// menu panel
+$static-menu-panel-width: 228px;
+$floating-menu-panel-width: 150px;
+
 // header bar
 $header-height: 5rem; 
 $header-font-size: 4rem;
@@ -27,6 +31,8 @@ $header-margin: 10vh;
     img {
         height: 100%;
         object-fit: cover;
+        border-top-left-radius: 0rem;
+        border-top-right-radius: 0rem;
     }
 }
 
@@ -40,11 +46,13 @@ $header-margin: 10vh;
     padding: 0 1.5rem;
 
     @include respond-to('md') { 
+        margin-left: calc( (100vw - 500px + #{ $static-menu-panel-width }) / 2 ); // HERE HERE HERE HERE HERE HERE
         width: 500px;
         padding: 0;
     }
 
     @include respond-to('lg') { 
+        margin-left: calc( (100vw - 600px) / 2 ); // HERE HERE HERE HERE HERE HERE
         width: 600px; 
     }
 
@@ -87,4 +95,33 @@ $header-margin: 10vh;
     @include respond-to('md') {
         margin-top: calc(#{$header-margin} + #{$sm-logo-height});
     }
+}
+
+%page-workshop {
+    @extend %page;
+
+    .side-images {
+        box-sizing: border-box;
+
+        @include respond-to('md') {
+            width: 60%;
+            padding: 7rem 0 0 0;
+            float: left;
+        }
+    }
+
+    .side-text{
+        box-sizing: border-box;
+
+        h2 {
+            padding: 0 0 1.3rem 0;
+        }
+
+        @include respond-to('md') {
+            width: 40%;
+            padding-right: 4rem;
+            margin: 0 0 8rem 0;
+            float:left;
+        }        
+    } 
 }

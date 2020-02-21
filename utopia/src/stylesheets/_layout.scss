@@ -22,6 +22,7 @@ $header-margin: 10vh;
 %header-image {
     height: 33vh;
     background: whitesmoke;
+    margin-top: 1rem;
     margin-bottom: 4rem;
 
     @include respond-to('md') {
@@ -31,8 +32,6 @@ $header-margin: 10vh;
     img {
         height: 100%;
         object-fit: cover;
-        border-top-left-radius: 0rem;
-        border-top-right-radius: 0rem;
     }
 }
 

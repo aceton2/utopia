@@ -55,6 +55,12 @@ $header-margin: 10vh;
         width: 600px; 
     }
 
+    section { padding-top: 6rem; }
+
+    @include respond-to('md') {
+        section { margin-bottom: 10rem; }
+    }
+
     iframe { 
         height: 200px;
         margin-bottom: 2rem;
@@ -79,7 +85,7 @@ $header-margin: 10vh;
     }
 
     img {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         border-radius: 2px;
         box-sizing: border-box;
     }
@@ -123,4 +129,40 @@ $header-margin: 10vh;
             float:left;
         }        
     } 
+}
+
+
+%fixed-ratio {
+    position: relative;
+    margin-bottom: 4rem;
+    display: inline-block;
+    width: 100%;
+
+    &:after {
+        content: '';
+        display: block;
+    }
+
+    img {
+        margin-bottom: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+%perfect-square {
+    @extend %fixed-ratio;
+    &:after { padding-bottom: 100%; }
+}
+
+%square {
+    @extend %fixed-ratio;
+    &:after { padding-bottom: 80%; }
+}
+
+%widescreen {
+    @extend %fixed-ratio;
+    &:after { padding-bottom: 75%; }
 }

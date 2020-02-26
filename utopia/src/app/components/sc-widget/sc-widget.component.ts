@@ -18,6 +18,7 @@ export class ScWidgetComponent implements AfterViewInit, OnDestroy {
   trackUrl: SafeUrl;
   showPlay = true;
 
+  @Input() title: string;
   @Input() imageSrc: string;
   @Input() set trackId(id) {
     this.trackUrl = this.sanitizer.bypassSecurityTrustResourceUrl(scPlayerUrl + id);

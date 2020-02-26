@@ -7,7 +7,7 @@ import {
     group
   } from '@angular/animations';
 
-function transitionDoesNotInvolveCover(fromState: string, toState: string) {
+export function transitionDoesNotInvolveCover(fromState: string, toState: string) {
   return fromState !== 'cover' && toState !== 'cover';
 }
 

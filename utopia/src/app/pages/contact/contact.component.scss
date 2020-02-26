@@ -3,11 +3,8 @@
 .contact {
     @extend %page;
 
-    .concept {
-        h2 {
-            margin-bottom: 0px !important;
-            padding-bottom: 0px !important; 
-        }
+    .lead {
+        color: #8252b5;
     }
 
     // why is this p special?? 
@@ -25,9 +22,6 @@
     }
 
     .contact-heading {
-        background-color: #ffffcf;
-        margin: 0 0 2rem 0;
-
         h2 {
             padding: 0.4rem 0 0.4rem  0;
             margin-top: 1rem;

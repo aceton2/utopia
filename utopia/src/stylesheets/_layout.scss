@@ -130,39 +130,3 @@ $header-margin: 10vh;
         }        
     } 
 }
-
-
-%fixed-ratio {
-    position: relative;
-    margin-bottom: 4rem;
-    display: inline-block;
-    width: 100%;
-
-    &:after {
-        content: '';
-        display: block;
-    }
-
-    img {
-        margin-bottom: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-%perfect-square {
-    @extend %fixed-ratio;
-    &:after { padding-bottom: 100%; }
-}
-
-%square {
-    @extend %fixed-ratio;
-    &:after { padding-bottom: 80%; }
-}
-
-%widescreen {
-    @extend %fixed-ratio;
-    &:after { padding-bottom: 75%; }
-}

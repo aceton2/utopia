@@ -5,6 +5,10 @@
 
     padding: 0 2rem;
 
+    .video-header {
+        margin: 2rem 0rem 0rem 0rem;
+    }
+
     ul {
         padding-left: 2rem;
         margin-bottom: 2rem;
@@ -20,6 +24,9 @@
     .logo {
         object-fit: contain;
         height: 150px;
-        margin-top: 10rem;
+        
+        @include respond-to('md') {
+            margin-top: -3rem;
+        }
     }
 }

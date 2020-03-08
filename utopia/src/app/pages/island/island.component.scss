@@ -4,10 +4,6 @@
 .island {
     @extend %page;
 
-    .flex {
-        display: flex;
-    }
-
     // IMAGES
     img { position: relative; }
 

@@ -1,12 +1,61 @@
 @import 'layout';
+@import 'placeholders';
 
 .show {
     @extend %page;
-}
 
-.wide {
-    height: 90px;
-    object-fit: cover;
+    // IMAGES
+
+    .disco {
+        @extend %square;
+        width: 49%;
+        margin-right: 2%;
+    }
+
+    .yellow {
+        @extend %square;
+        width: 49%;
+    }
+
+    .schneider {
+        @extend %square;
+        width: 49%;
+        margin-right: 2%;
+    }
+
+    .backlight {
+        @extend %square;
+        width: 49%;
+    }    
+
+    .collage {
+        display: flex;
+
+        height: 156px;
+        @include respond-to('md') { height: 256px; }
+
+        img { 
+            height: 100%;
+            object-fit: cover; 
+        }
+    
+        .vert-box {
+            padding-left: 1rem;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+    
+            .face {
+                height: 50%;
+                padding-bottom: 2%;
+            }
+        
+            .window {
+                height: 50%;
+            } 
+        }
+    }
 }
 
 .offToLeft {

@@ -1,6 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+.flex {
+    display: flex;
+}
+
 .header-image {
     background: whitesmoke;
     margin: $header-image-margin;

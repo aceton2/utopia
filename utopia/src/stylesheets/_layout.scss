@@ -39,7 +39,6 @@ $header-margin: 10vh;
 %page {    
 
     word-wrap: break-word;
-    box-sizing: border-box;
 
     width: 100%;    
     padding: 0 1.5rem;
@@ -87,7 +86,6 @@ $header-margin: 10vh;
     img {
         margin-bottom: 2rem;
         border-radius: 2px;
-        box-sizing: border-box;
     }
 }
 
@@ -106,7 +104,6 @@ $header-margin: 10vh;
     @extend %page;
 
     .side-images {
-        box-sizing: border-box;
 
         @include respond-to('md') {
             width: 60%;
@@ -116,7 +113,6 @@ $header-margin: 10vh;
     }
 
     .side-text{
-        box-sizing: border-box;
 
         h2 {
             padding: 0 0 1.3rem 0;

@@ -1,58 +1,32 @@
 @import 'mixins';
+@import 'variables';
 
-$z-index-cover: 20;
-$z-index-tabs-base: 1;
-$z-index-header-bar: 10;
-
-// menu panel
-$static-menu-panel-width: 228px;
-$floating-menu-panel-width: 150px;
-
-// header bar
-$header-height: 5rem; 
-$header-font-size: 4rem;
-
-// logo
-$sm-logo-height: 80px;
-
-// page
-$header-margin: 10vh;
-
-// page header image
-%header-image {
-    height: 33vh;
-    background: whitesmoke;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
-
-    @include respond-to('md') {
-        height: 350px;
-    }
-
-    img {
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-// basic page
 %page {    
 
     word-wrap: break-word;
+
+    // CONTAINER WIDTH
 
     width: 100%;    
     padding: 0 1.5rem;
 
     @include respond-to('md') { 
-        margin-left: calc( (100vw - 500px + #{ $static-menu-panel-width }) / 2 ); // HERE HERE HERE HERE HERE HERE
-        width: 500px;
+        margin-left: calc( (100vw - #{$container-width-md} + #{ $static-menu-panel-width } ) / 2 );
+        width: $container-width-md;
         padding: 0;
     }
 
     @include respond-to('lg') { 
-        margin-left: calc( (100vw - 600px) / 2 ); // HERE HERE HERE HERE HERE HERE
-        width: 600px; 
+        margin-left: calc( (100vw - #{$container-width-lg} + #{ $static-menu-panel-width } ) / 2 );
+        width: $container-width-lg;
     }
+
+    @include respond-to('xl') { 
+        margin-left: calc( (100vw - #{$container-width-xl}) / 2 );
+        width: $container-width-xl;
+    }
+
+    // SECTIONS
 
     section { padding-top: 4rem; }
 
@@ -60,15 +34,19 @@ $header-margin: 10vh;
         section { margin-bottom: 6rem; }
     }
 
-    iframe { 
-        height: 200px;
+    // CONTENT
+
+    img {
         margin-bottom: 2rem;
-        @include respond-to('md') { height: 281px; }
-        @include respond-to('lg') { height: 337px; }
+        border-radius: 2px;
     }
 
-    .header-image {
-        @extend %header-image;
+    iframe { 
+        height: $header-image-height-xs;
+        margin: $header-image-margin;
+        @include respond-to('md') { height: $container-width-md * 0.57; }
+        @include respond-to('lg') { height: $container-width-lg * 0.57; }
+        @include respond-to('xl') { height: $container-width-xl * 0.57; }
     }
 
     .quote {
@@ -81,11 +59,6 @@ $header-margin: 10vh;
     .quote-author {
         text-align: right;
         color: #993300;
-    }
-
-    img {
-        margin-bottom: 2rem;
-        border-radius: 2px;
     }
 }
 

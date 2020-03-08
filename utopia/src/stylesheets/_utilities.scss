@@ -1,4 +1,20 @@
 @import 'mixins';
+@import 'variables';
+
+.header-image {
+    background: whitesmoke;
+    margin: $header-image-margin;
+
+    height: $header-image-height-xs;
+    @include respond-to('md') { height: $container-width-md * 0.57; }
+    @include respond-to('lg') { height: $container-width-lg * 0.57; }
+    @include respond-to('xl') { height: $container-width-xl * 0.57; }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
 
 .hide-sm-down {
     display: none;

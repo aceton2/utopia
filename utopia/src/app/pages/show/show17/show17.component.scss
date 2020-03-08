@@ -1,7 +1,7 @@
 @import 'layout';
 
 .show {
-    @extend %page-workshop;
+    @extend %page-with-columns;
 
     .break-adjust { margin-right: 1px; }
 }

@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .workshops {
-    @extend %page-workshop;
+    @extend %page-with-columns;
 
     .content-images-01 {
         margin-left: 10%;

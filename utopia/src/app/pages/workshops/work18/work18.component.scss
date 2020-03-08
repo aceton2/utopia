@@ -3,7 +3,7 @@
 @import 'placeholders';
 
 .workshops {
-    @extend %page-workshop;
+    @extend %page-with-columns;
 
     // THIS IS ONLY IN THIS PAGE - CHECK WITH AM
     @include respond-to('md') {

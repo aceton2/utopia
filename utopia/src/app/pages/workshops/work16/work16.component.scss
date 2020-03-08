@@ -1,5 +1,5 @@
 @import 'layout';
 
 .workshops {
-    @extend %page-workshop;
+    @extend %page-with-columns;
 }

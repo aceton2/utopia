@@ -54,10 +54,10 @@ $header-margin: 10vh;
         width: 600px; 
     }
 
-    section { padding-top: 6rem; }
+    section { padding-top: 4rem; }
 
     @include respond-to('md') {
-        section { margin-bottom: 10rem; }
+        section { margin-bottom: 6rem; }
     }
 
     iframe { 

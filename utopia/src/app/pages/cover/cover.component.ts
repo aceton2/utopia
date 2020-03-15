@@ -1,10 +1,14 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 const backgroundSrcs = [
-  "assets/imgs/cover/transcultural-art-lab-juist-design-your-utopia-01.jpg",
-  "assets/imgs/cover/transcultural-art-lab-juist-design-your-utopia-02.jpg",
-  "assets/imgs/cover/transcultural-art-lab-juist-design-your-utopia-03.jpg",
-  "assets/imgs/cover/transcultural-art-lab-juist-design-your-utopia-04.jpg"
+  "assets/imgs/cover/Startseite_1.jpg",
+  "assets/imgs/cover/Startseite_2.jpg",
+  "assets/imgs/cover/Startseite_3.jpg",
+  "assets/imgs/cover/Startseite_4.jpg",
+  "assets/imgs/cover/Startseite_5.jpg",
+  "assets/imgs/cover/Startseite_6.jpg",
+  "assets/imgs/cover/Startseite_7.jpg",
+  "assets/imgs/cover/Startseite_8.jpg"
 ];
 
 @Component({
@@ -21,7 +25,7 @@ export class CoverComponent implements OnInit {
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    const imgSrc = backgroundSrcs[Math.floor(Math.random() * 4)];
+    const imgSrc = backgroundSrcs[Math.floor(Math.random() * 8)];
     this.renderer.setStyle(this.bgDiv.nativeElement, 'background-image', `url("${imgSrc}")`);
   }
 

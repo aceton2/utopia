@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
   currentPath: string;
-  showFloatingMenu: boolean = false;
+  showFloatingMenu = false;
 
   constructor(private router: Router, private viewportScroller: ViewportScroller) {}
 
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
     .subscribe( ev => {
       const path = ev.url.split('#');
       path[1] ? this.viewportScroller.scrollToAnchor(path[1]) : this.viewportScroller.scrollToPosition([0, 0]);
-    })
+    });
   }
 
   ngOnDestroy() {
@@ -42,6 +42,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }

@@ -1,18 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { GalleryService } from 'src/app/services/gallery.service';
-
-const gallery1 = [
-    {
-        src: 'assets/imgs/island/tal1.gif',
-        w: 600,
-        h: 400
-    },
-    {
-        src: 'assets/imgs/island/tal1.gif',
-        w: 1200,
-        h: 900
-    }
-];
+import { Component } from '@angular/core';
+import { TemplateGalleries } from 'src/app/components/directives/gallery.interface';
+import { work18Galleries } from './work18.galleries';
 
 @Component({
   selector: 'app-work18',
@@ -20,13 +8,5 @@ const gallery1 = [
   styleUrls: ['./work18.component.scss']
 })
 export class Work18Component {
-
-    constructor(
-        private galleryService: GalleryService
-    ) { }
-
-
-    openGallery() {
-        this.galleryService.initGallery(0, gallery1);
-    }
+    galls: TemplateGalleries = work18Galleries;
 }

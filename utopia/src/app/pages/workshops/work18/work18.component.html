@@ -6,13 +6,12 @@
     
     <app-tabs branch="workshops"></app-tabs>
 
-    <h2 (click)="openGallery()">
+    <h2>
         the workshops in 2018
     </h2>
 
     <p>
         Art Workshops lie at the heart of the TRANSCULTURAL ART LAB. The 2018 edition of TAL had seven fields of artistic exploration on offer: 
-        
 
         <a routerLink="/workshops/2018" fragment="video-art">Video↓</a>,
         <a routerLink="/workshops/2018" fragment="performance-art">Performance↓</a>,
@@ -35,14 +34,14 @@
         </div>
 
         <div class="side-images">
-            <img class="grass" src="assets/imgs/workshops/2018/tal-w18-7.jpg">
-            <img class="quartet" src="assets/imgs/workshops/2018/tal-w18-1.png">
+            <img class="grass" [openGallery]="[galls.video, 'grass']">
+            <img class="quartet" [openGallery]="[galls.video, 'quartet']">
         </div>
 
         <div class="clear"></div>
 
-        <div class="coffee"><img src="assets/imgs/workshops/2018/tal-w18-35.jpg"></div>
-        <div class="face"><img src="assets/imgs/workshops/2018/tal-w18-13.jpg"></div>
+        <div class="coffee"><img [openGallery]="[galls.video, 'coffee']"></div>
+        <div class="face"><img [openGallery]="[galls.video, 'face']"></div>
 
     </section>
 
@@ -55,12 +54,12 @@
         </div>
 
         <div class="side-images">
-            <img class="net" src="assets/imgs/workshops/2018/tal-w18-12.jpg">
+            <img class="net" [openGallery]="[galls.perf, 'net']">
         </div>
 
         <div class="clear"></div>
 
-        <img class="snow" src="assets/imgs/workshops/2018/tal-w18-3.jpg">
+        <img class="snow" [openGallery]="[galls.perf, 'snow']">
         
     </section>
 
@@ -77,13 +76,13 @@
         </div>
 
         <div class="side-images">
-            <img class="gorilla" src="assets/imgs/workshops/2018/tal-w18-2.jpg">
-            <div class="cartoon"><img src="assets/imgs/workshops/2018/tal-w18-16.jpg"></div>
+            <img class="gorilla" [openGallery]="[galls.illus, 'gorilla']">
+            <div class="cartoon"><img [openGallery]="[galls.illus, 'cartoon']"></div>
         </div>
 
         <div class="clear"></div>
 
-        <div class="office"><img src="assets/imgs/workshops/2018/tal-w18-10.jpg"></div>
+        <div class="office"><img [openGallery]="[galls.illus, 'office']"></div>
     </section>
 
     <section id="contemporary-dance">
@@ -96,14 +95,14 @@
         </div>
 
         <div class="side-images">
-            <img class="pants" src="assets/imgs/workshops/2018/tal-w18-9.jpg">
+            <img class="pants" [openGallery]="[galls.dance, 'pants']">
         </div>
 
         <div class="clear"></div>
 
-        <img class="bow" src="assets/imgs/workshops/2018/tal-w18-26.jpg">
-        <div class="judo"><img src="assets/imgs/workshops/2018/tal-w18-19.jpg"></div>
-        <div class="group"><img src="assets/imgs/workshops/2018/tal-w18-24.jpg"></div><div class="clear"></div>
+        <img class="bow" [openGallery]="[galls.dance, 'bow']">
+        <div class="judo"><img [openGallery]="[galls.dance, 'judo']"></div>
+        <div class="group"><img [openGallery]="[galls.dance, 'group']"></div><div class="clear"></div>
 
     </section>
 
@@ -125,14 +124,14 @@
         </div>
 
         <div class="side-images">
-            <div class="sound"><img src="assets/imgs/workshops/2018/tal-w18-29.jpg"></div>
+            <div class="sound"><img [openGallery]="[galls.experi, 'sound']"></div>
         </div>
 
         <div class="clear"></div>
 
-        <img class="duck" src="assets/imgs/workshops/2018/tal-w18-36.jpg">
-        <div class="girl"><img src="assets/imgs/workshops/2018/tal-w18-15.jpg"></div>
-        <div class="huddle"><img src="assets/imgs/workshops/2018/tal-w18-21.jpg"></div><div class="clear"></div>
+        <img class="duck" [openGallery]="[galls.experi, 'duck']">
+        <div class="girl"><img [openGallery]="[galls.experi, 'girl']"></div>
+        <div class="huddle"><img [openGallery]="[galls.experi, 'huddle']"></div><div class="clear"></div>
     </section>
 
     <section id="music">
@@ -144,13 +143,13 @@
         </div>
 
         <div class="side-images">
-            <img class="cello" src="assets/imgs/workshops/2018/tal-w18-23.jpg">
+            <img class="cello" [openGallery]="[galls.music, 'cello']">
         </div>
 
         <div class="clear"></div>
 
-        <div class="keys"><img src="assets/imgs/workshops/2018/tal-w18-4.jpg"></div>
-        <div class="drum"><img src="assets/imgs/workshops/2018/tal-w18-17.jpg"></div>
+        <div class="keys"><img [openGallery]="[galls.music, 'keys']"></div>
+        <div class="drum"><img [openGallery]="[galls.music, 'drum']"></div>
 
     </section>
 
@@ -166,12 +165,12 @@
         </div>
 
         <div class="side-images">
-            <img class="ladder" src="assets/imgs/workshops/2018/tal-w18-5.jpg">
+            <img class="ladder" [openGallery]="[galls.insta, 'ladder']">
         </div>
 
         <div class="clear"></div>
 
-        <img class="tv" src="assets/imgs/workshops/2018/tal-w18-27.jpg">
+        <img class="tv" [openGallery]="[galls.insta, 'tv']">
     </section>
 
     <app-footer></app-footer>

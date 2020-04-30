@@ -24,6 +24,7 @@ import { FloatMenuComponent } from './components/float-menu/float-menu.component
 import { Show18Component } from './pages/show/show18/show18.component';
 import { Work18Component } from './pages/workshops/work18/work18.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { OpenGalleryDirective } from './components/directives/open-gallery.directive';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     FloatMenuComponent,
     Show18Component,
     Work18Component,
-    GalleryComponent
+    GalleryComponent,
+    OpenGalleryDirective,
   ],
   imports: [
     BrowserModule,

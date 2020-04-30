@@ -34,7 +34,10 @@
 
     // IMAGES
 
-    img { position: relative; }
+    section img { 
+        position: relative; 
+        cursor: pointer;
+    }
     
     // .grass {}
 

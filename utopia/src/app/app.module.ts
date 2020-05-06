@@ -25,6 +25,7 @@ import { Show18Component } from './pages/show/show18/show18.component';
 import { Work18Component } from './pages/workshops/work18/work18.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { OpenGalleryDirective } from './components/directives/open-gallery.directive';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { OpenGalleryDirective } from './components/directives/open-gallery.direc
     Work18Component,
     GalleryComponent,
     OpenGalleryDirective,
+    SliderComponent,
   ],
   imports: [
     BrowserModule,

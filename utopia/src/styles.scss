@@ -4,6 +4,28 @@
 @import 'stylesheets/base';
 @import 'stylesheets/fonts';
 
-@import '@glidejs/glide/dist/css/glide.core.min.css';
 @import 'photoswipe/dist/photoswipe.css';
 @import 'photoswipe/dist/default-skin/default-skin.css';
+@import 'flickity/dist/flickity.min.css';
+
+
+.flkty-slide {
+    width: 30%;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+}
+
+@include respond-to('md') {
+    .flkty-slide {
+        width: 20%;
+        height: 150px;
+        margin-right: 10px;
+    } 
+}

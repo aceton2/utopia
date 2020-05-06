@@ -60,7 +60,12 @@
         <div class="clear"></div>
 
         <img class="snow" [openGallery]="[galls.perf, 'snow']">
-        
+
+        <app-slider 
+            [gallery]="galls.perf"
+            [images]="['forearm', 'eyes', 'keyboard', 'camp', 'ghost']">
+        </app-slider>
+
     </section>
 
     <section id="illustration">
@@ -171,6 +176,11 @@
         <div class="clear"></div>
 
         <img class="tv" [openGallery]="[galls.insta, 'tv']">
+
+        <app-slider 
+            [gallery]="galls.insta"
+            [images]="['bag', 'water', 'view', 'egg']">
+        </app-slider>
     </section>
 
     <app-footer></app-footer>

@@ -35,6 +35,34 @@ const perfGallery: GalleryCollection = {
         w: 1200,
         h: 900
     },
+    forearm: {
+        src: 'assets/imgs/workshops/2018/tal-w18-6.jpg',
+        w: 1200,
+        h: 900
+    },
+    eyes: {
+        src: 'assets/imgs/workshops/2018/tal-w18-37.jpg',
+        w: 1200,
+        h: 900
+    },
+    keyboard: {
+        src: 'assets/imgs/workshops/2018/tal-w18-32-large.jpg',
+        srcHi: 'assets/imgs/workshops/2018/tal-w18-32-large.jpg',
+        w: 1200,
+        h: 900
+    },
+    camp: {
+        src: 'assets/imgs/workshops/2018/tal-w18-14.jpg',
+        srcHi: 'assets/imgs/workshops/2018/tal-w18-14-large.jpg',
+        w: 1200,
+        h: 900
+    },
+    ghost: {
+        src: 'assets/imgs/workshops/2018/tal-w18-8.jpg',
+        srcHi: 'assets/imgs/workshops/2018/tal-w18-8-large.jpg',
+        w: 1200,
+        h: 900
+    },
 };
 
 const illusGallery: GalleryCollection = {
@@ -128,6 +156,29 @@ const instaGallery: GalleryCollection = {
     },
     tv: {
         src: 'assets/imgs/workshops/2018/tal-w18-27.jpg',
+        w: 1200,
+        h: 900
+    },
+    bag: {
+        src: 'assets/imgs/workshops/2018/tal-w18-30.jpg',
+        srcHi: 'assets/imgs/workshops/2018/tal-w18-30-large.jpg',
+        w: 1200,
+        h: 900
+    },
+    water: {
+        src: 'assets/imgs/workshops/2018/tal-w18-11.jpg',
+        srcHi: 'assets/imgs/workshops/2018/tal-w18-11-large.jpg',
+        w: 1200,
+        h: 900
+    },
+    view: {
+        src: 'assets/imgs/workshops/2018/tal-w18-31-large.jpg',
+        w: 1200,
+        h: 900
+    },
+    egg: {
+        src: 'assets/imgs/workshops/2018/tal-w18-20.jpg',
+        srcHi: 'assets/imgs/workshops/2018/tal-w18-20-large.jpg',
         w: 1200,
         h: 900
     },

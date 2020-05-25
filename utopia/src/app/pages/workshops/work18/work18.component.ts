@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TemplateGalleries } from 'src/app/components/directives/gallery.interface';
+import { TemplateGalleries } from 'src/app/services/gallery.interface';
 import { work18Galleries } from './work18.galleries';
 
 @Component({

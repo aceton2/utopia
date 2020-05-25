@@ -1,6 +1,6 @@
 import { Directive, HostListener, Input, ElementRef } from '@angular/core';
 import { GalleryService } from 'src/app/services/gallery.service';
-import { GalleryCollection, GalleryItem } from './gallery.interface';
+import { GalleryCollection } from '../../services/gallery.interface';
 
 @Directive({
     selector: '[openGallery]'
@@ -8,31 +8,21 @@ import { GalleryCollection, GalleryItem } from './gallery.interface';
 export class OpenGalleryDirective {
 
     gallery: GalleryCollection;
-    image: GalleryItem;
+    imageSrc: string;
 
     @Input('openGallery') set main(val: [GalleryCollection, string]) {
         this.gallery = val[0];
-        this.image = this.gallery[val[1]];
-        this.el.nativeElement.src = this.image.src;
+        this.imageSrc = this.gallery[val[1]];
+        this.el.nativeElement.src = this.imageSrc;
     }
 
     @HostListener('click', ['$event.target'])
         openGallery() {
-            this.galleryService.initGallery(this.getIndex(), this.getPSWPGallery());
+            this.galleryService.initGallery(this.imageSrc, this.gallery);
     }
 
     constructor(
         private galleryService: GalleryService,
         private el: ElementRef
     ) {}
-
-    getIndex(): number {
-        return Object.values(this.gallery).indexOf(this.image);
-    }
-
-    getPSWPGallery() {
-        return Object.values(this.gallery)
-            .map((item: GalleryItem) => ({ ...item, src: item.srcHi || item.src }))
-            .filter(item => item.src);
-    }
 }

@@ -1,7 +1,7 @@
 <div class="workshops">
 
 	<div class="header-image">
-		<img src="assets/imgs/workshops/2018/tal-w18-25.jpg">
+        <img [openGallery]="[galls.head, 'sunset']">
     </div>
     
     <app-tabs branch="workshops"></app-tabs>
@@ -63,7 +63,7 @@
 
         <app-slider 
             [gallery]="galls.perf"
-            [images]="['forearm', 'eyes', 'keyboard', 'camp', 'ghost']">
+            [keys]="['forearm', 'eyes', 'keyboard', 'camp', 'ghost']">
         </app-slider>
 
     </section>
@@ -179,7 +179,7 @@
 
         <app-slider 
             [gallery]="galls.insta"
-            [images]="['bag', 'water', 'view', 'egg']">
+            [keys]="['bag', 'water', 'view', 'egg']">
         </app-slider>
     </section>
 

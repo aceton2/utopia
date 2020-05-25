@@ -1,7 +1,12 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { GalleryCollection, GalleryItem } from '../directives/gallery.interface';
+import { GalleryCollection } from '../../services/gallery.interface';
 import Flickity from 'flickity';
 import { GalleryService } from 'src/app/services/gallery.service';
+
+interface SlideItem {
+    src: string;
+    key: string;
+}
 
 @Component({
   selector: 'app-slider',
@@ -12,10 +17,10 @@ export class SliderComponent implements OnInit {
 
     @ViewChild('slider', {static: true}) sliderEl: ElementRef;
 
-    @Input() gallery: any;
-    @Input() images: Array<any>;
+    @Input() gallery: GalleryCollection;
+    @Input() keys: Array<string>;
 
-    slides: Array<any> = [];
+    slides: Array<SlideItem> = [];
     flkty: any;
 
     constructor(
@@ -23,11 +28,10 @@ export class SliderComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        setTimeout( () => this.initGallery(), 0 );
+        this.initSlider();
     }
 
-    initGallery() {
-        this.addKeysToGallery();
+    initSlider() {
         this.setSlides();
 
         this.flkty = new Flickity(this.sliderEl.nativeElement, {
@@ -52,26 +56,23 @@ export class SliderComponent implements OnInit {
         return div;
     }
 
+    // Setup Slides
+
     setSlides() {
-        this.slides = this.images.map( img => ({...this.gallery[img], key: img}) );
+        this.slides = this.keys.map( key => ({
+            src: this.gallery[key],
+            key
+        }) );
     }
+
+    // Open Gallery
 
     showImage(cellElement) {
-        const pswpGallery = this.getPSWPGallery();
-        const index = pswpGallery.findIndex(slide => slide.key === cellElement.firstElementChild.alt);
-        this.galleryService.initGallery(index, this.getPSWPGallery());
-
-    }
-
-    getPSWPGallery(): Array<any> {
-        return Object.values(this.gallery)
-            .map((item: GalleryItem) => ({ ...item, src: item.srcHi || item.src }))
-            .filter(item => item.src);
-    }
-
-    addKeysToGallery() {
-        for (const key of Object.keys(this.gallery)) {
-            this.gallery[key].key = key;
-        }
+        const rawSrc = cellElement.firstElementChild.src;
+        const src = rawSrc.substring(rawSrc.indexOf('assets'));
+        this.galleryService.initGallery(
+            src,
+            this.gallery
+        );
     }
 }

@@ -1,4 +1,4 @@
-import { Directive, HostListener, Input, ElementRef } from '@angular/core';
+import { Directive, HostListener, Input, ElementRef, HostBinding } from '@angular/core';
 import { GalleryService } from 'src/app/services/gallery.service';
 import { GalleryCollection } from '../../services/gallery.interface';
 
@@ -15,6 +15,8 @@ export class OpenGalleryDirective {
         this.imageSrc = this.gallery[val[1]];
         this.el.nativeElement.src = this.imageSrc;
     }
+
+    @HostBinding('class.cursor-as-pointer') true;
 
     @HostListener('click', ['$event.target'])
         openGallery() {

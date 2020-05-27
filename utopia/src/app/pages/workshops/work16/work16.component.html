@@ -1,89 +1,90 @@
 
 <div class="workshops">
 
-	<app-sc-widget
-		title="building utopia"
-        class="marB4"
-        imageSrc="assets/imgs/workshops/2016/dig1.jpg"
-        trackId="297132840">        
-	</app-sc-widget>
-	
-	<app-tabs branch="workshops"></app-tabs>
-
-	<h2> the workshops in 2016 </h2>
-		
-	<section>
-		<h2> photography </h2>
-		<p>
-			A central subject of photography is the perspective, the view, the artist shows the viewer of the image. Thoughts about utopia are very personal and the matters vary with the perspective of the artist. In the workshop technical and artistic exercises create a foundation on which the individual artist can develop his own language and discuss them with the group.
-		</p>
-
-		<div>
-			<img src="assets/imgs/workshops/2016/left.jpg">
-		</div>
-	</section>
-
-	<section>
-		<h2>installation art</h2>
-		<p>
-			Taking inspiration from the experience of working in a diverse group the Installation Group uses a wide range of different medias to explore and express - a sound installation, a short movie, photo objects, site specific objects. Small individual and larger collaborative activities as a group are realized in different locations. The Island's coast and living space at Jubi Juist form central concepts. Permanent thinking, waiting, observing, touchable emotions are accumulated in varied objects - a living room in the sea, brick steps near the water, photo objects of native birds, empty chairs waiting for the Tide, a breathing trailer with transnational voices and a projection of the fleeting things already washed away... The group's look at emotion and utopian expression conceptualize objects and constructed utopian atmosphere beyond reality.
-		</p>
-
-		<div>
-			<img class="imgdiv w50 floatL padR1" src="assets/imgs/workshops/2016/look.jpg">
-			<img class="imgdiv w50 floatL padL1 padT9 padB6" src="assets/imgs/workshops/2016/drill.jpg">
-			<div class="clear"></div>
-			<img class="w50 floatL padR1" src="assets/imgs/workshops/2016/kneel.jpg">
-			<img class="w50 floatL padL1 padT5	" src="assets/imgs/workshops/2016/meet.jpg">
-			<div class="clear"></div>
-			<img class="w60" src="assets/imgs/workshops/2016/mirror.jpg">
-			<img class="imgdiv w60 floatR padB6" src="assets/imgs/workshops/2016/carry.jpg">
-			<div class="clear"></div>
-		</div>
-	</section>
-
-	<section>
-		<h2>editorial design</h2>
-		<p>
-			Within the creative collaboration, the Editorial Design group develops a series of posters. The pieces showcase literal destruction of the things that torment us, destruction which in this case has a very cathartic effect. "Some problems seem bigger than us, in fact some of them are so large that it feels like there is no way to overcome them, and sadly a lot of them are a part of our daily routine, they destroy us from inside. But we must overcome and crush said obstacles, otherwise we are doomed to a life of misery and mediocrity." Hence the motto, destroy what destroys you.
-		</p>
-
-		<div>
-			<img class=" w50 padR1" src="assets/imgs/workshops/2016/beach.jpg">
-			<img class=" w100" src="assets/imgs/workshops/2016/fog.jpg">
-			<img class=" w80 padL-20 padB6" src="assets/imgs/workshops/2016/bow.jpg">
-		</div>
-	</section>
-
-	<section>
-		<h2>music</h2>
-		<p>
-			The Music Workshop deals with classical musicians, rock musicians and nonmusicians working together. In different imaginations, each personality and each tone refer to a different shade of colour, personal ideas about Utopia lead to a musical dialogue. In the show, the band performs, drawing inspiration off their diverse repertoire, including elements of classical, traditional Armenian and Azeri, rock and free music, playing on various instruments as well as speaking, singing and whistling on a bottle organ.
-		</p>
-
-		<div>
-			<img class="w50 padR1" src="assets/imgs/workshops/2016/sax.jpg">
-			<img class="w75 floatR padB6" src="assets/imgs/workshops/2016/song.jpg">
-			<div class="clear"></div>
-		</div>
-	</section>
-
-	<section>
-		<h2>painting</h2>
-		<p>
-			Imagine you want to design your individual and unique vision of Utopia - but then you are asked to work in a group. Based on this contradiction (which seems to be symptomatic for the topic of 'Utopia' itself), the participants of the Painting/Drawing Workshop decided to produce a comic book dealing with precisely that situation. It tells the story of the greek Gods and Goddesses - alias the participants - who find themselves in conflict when discussing how to improve the situation on earth. In the installation the comic book is shown as a work in progress on a cluttered drafting desk.
-		</p>
-
-		<div>
-			<img class="w70 padL-30" src="assets/imgs/workshops/2016/clown.jpg">
-			<img class="w75" src="assets/imgs/workshops/2016/marker.jpg">
-			<img class="w50 padR1 floatL" src="assets/imgs/workshops/2016/tiny.jpg">
-			<img class="w50 padL1 floatL" src="assets/imgs/workshops/2016/black.jpg">
-			<div class="clear"></div>
-			<img class="w50 padR1" src="assets/imgs/workshops/2016/scatter.jpg">
-			<img class="w60 floatR padB6" src="assets/imgs/workshops/2016/yellow.jpg">
-		</div>
-	</section>
-
-    <app-footer></app-footer>
-</div>
+        <app-sc-widget
+            title="building utopia"
+            class="marB4"
+            imageSrc="assets/imgs/workshops/2016/dig1.jpg"
+            trackId="297132840">        
+        </app-sc-widget>
+        
+        <app-tabs branch="workshops"></app-tabs>
+    
+        <h2> the workshops in 2016 </h2>
+            
+        <section>
+            <h2> photography </h2>
+            <p>
+                A central subject of photography is the perspective, the view, the artist shows the viewer of the image. Thoughts about utopia are very personal and the matters vary with the perspective of the artist. In the workshop technical and artistic exercises create a foundation on which the individual artist can develop his own language and discuss them with the group.
+            </p>
+    
+            <div>
+                <img [openGallery]="[galls.photo, 1]">
+            </div>
+        </section>
+    
+        <section>
+            <h2>installation art</h2>
+            <p>
+                Taking inspiration from the experience of working in a diverse group the Installation Group uses a wide range of different medias to explore and express - a sound installation, a short movie, photo objects, site specific objects. Small individual and larger collaborative activities as a group are realized in different locations. The Island's coast and living space at Jubi Juist form central concepts. Permanent thinking, waiting, observing, touchable emotions are accumulated in varied objects - a living room in the sea, brick steps near the water, photo objects of native birds, empty chairs waiting for the Tide, a breathing trailer with transnational voices and a projection of the fleeting things already washed away... The group's look at emotion and utopian expression conceptualize objects and constructed utopian atmosphere beyond reality.
+            </p>
+    
+            <div>
+                <img class="imgdiv w50 floatL padR1" [openGallery]="[galls.installation, 1]">
+                <img class="imgdiv w50 floatL padL1 padT9 padB6" [openGallery]="[galls.installation, 2]">
+                <div class="clear"></div>
+                <img class="w50 floatL padR1" [openGallery]="[galls.installation, 3]">
+                <img class="w50 floatL padL1 padT5	" [openGallery]="[galls.installation, 4]">
+                <div class="clear"></div>
+                <img class="w60" [openGallery]="[galls.installation, 5]">
+                <img class="imgdiv w60 floatR padB6" [openGallery]="[galls.installation, 6]">
+                <div class="clear"></div>
+            </div>
+        </section>
+    
+        <section>
+            <h2>editorial design</h2>
+            <p>
+                Within the creative collaboration, the Editorial Design group develops a series of posters. The pieces showcase literal destruction of the things that torment us, destruction which in this case has a very cathartic effect. "Some problems seem bigger than us, in fact some of them are so large that it feels like there is no way to overcome them, and sadly a lot of them are a part of our daily routine, they destroy us from inside. But we must overcome and crush said obstacles, otherwise we are doomed to a life of misery and mediocrity." Hence the motto, destroy what destroys you.
+            </p>
+    
+            <div>
+                <img class=" w50 padR1" [openGallery]="[galls.editorial, 1]">
+                <img class=" w100" [openGallery]="[galls.editorial, 2]">
+                <img class=" w80 padL-20 padB6" [openGallery]="[galls.editorial, 3]">
+            </div>
+        </section>
+    
+        <section>
+            <h2>music</h2>
+            <p>
+                The Music Workshop deals with classical musicians, rock musicians and nonmusicians working together. In different imaginations, each personality and each tone refer to a different shade of colour, personal ideas about Utopia lead to a musical dialogue. In the show, the band performs, drawing inspiration off their diverse repertoire, including elements of classical, traditional Armenian and Azeri, rock and free music, playing on various instruments as well as speaking, singing and whistling on a bottle organ.
+            </p>
+    
+            <div>
+                <img class="w50 padR1" [openGallery]="[galls.music, 1]">
+                <img class="w75 floatR padB6" [openGallery]="[galls.music, 2]">
+                <div class="clear"></div>
+            </div>
+        </section>
+    
+        <section>
+            <h2>painting</h2>
+            <p>
+                Imagine you want to design your individual and unique vision of Utopia - but then you are asked to work in a group. Based on this contradiction (which seems to be symptomatic for the topic of 'Utopia' itself), the participants of the Painting/Drawing Workshop decided to produce a comic book dealing with precisely that situation. It tells the story of the greek Gods and Goddesses - alias the participants - who find themselves in conflict when discussing how to improve the situation on earth. In the installation the comic book is shown as a work in progress on a cluttered drafting desk.
+            </p>
+    
+            <div>
+                <img class="w70 padL-30" [openGallery]="[galls.painting, 1]">
+                <img class="w75" [openGallery]="[galls.painting, 2]">
+                <img class="w50 padR1 floatL" [openGallery]="[galls.painting, 3]">
+                <img class="w50 padL1 floatL" [openGallery]="[galls.painting, 4]">
+                <div class="clear"></div>
+                <img class="w50 padR1" [openGallery]="[galls.painting, 5]">
+                <img class="w60 floatR padB6" [openGallery]="[galls.painting, 6]">
+            </div>
+        </section>
+    
+        <app-footer></app-footer>
+    </div>
+    

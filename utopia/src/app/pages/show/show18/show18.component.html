@@ -50,10 +50,16 @@
         <img [openGallery]="[galls.juist, 9]">
     </div>
 
-    <div class="marB6"></div>
+    <div class="clear"></div>
+    <div class="marB10"></div>
 
     <img class="w70" [openGallery]="[galls.juist, 10]">
     <img class="w70" [openGallery]="[galls.juist, 11]">
+
+    <app-slider 
+        [gallery]="galls.juist"
+        [keys]="[12, 13, 14, 15, 16]">
+    </app-slider>
 
     <div class="marB10"></div>
 

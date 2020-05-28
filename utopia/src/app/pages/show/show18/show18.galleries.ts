@@ -19,6 +19,12 @@ export const show18Galleries: TemplateGalleries = {
         9: `${folder}/11.jpg`,
         10: `${folder}/40.jpg`,
         11: `${folder}/35.jpg`,
+        // slider
+        12: `${folder}/26.jpg`,
+        13: `${folder}/33.jpg`,
+        14: `${folder}/27.jpg`,
+        15: `${folder}/14.jpg`,
+        16: `${folder}/7.jpg`,
     },
     tbilisi: {
         1: `${folder}/3.jpg`,

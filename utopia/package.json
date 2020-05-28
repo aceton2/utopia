@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "printDims": "node scripts/getImgDim"
+    "generateDims": "node scripts/getImgDim"
   },
   "private": true,
   "dependencies": {

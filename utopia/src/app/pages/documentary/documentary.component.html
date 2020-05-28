@@ -29,7 +29,12 @@
 
 	<img [openGallery]="[galls.network, 2]">
 
-	<img class="w70" [openGallery]="[galls.network, 3]">
+    <img class="w70" [openGallery]="[galls.network, 3]">
+    
+    <app-slider 
+        [gallery]="galls.network"
+        [keys]="[4, 5, 6, 7, 8, 9]">
+    </app-slider>
 
 	<app-footer></app-footer>
 </div>

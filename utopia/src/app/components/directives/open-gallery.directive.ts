@@ -18,7 +18,7 @@ export class OpenGalleryDirective {
 
     @HostBinding('class.cursor-as-pointer') true;
 
-    @HostListener('click', ['$event.target'])
+    @HostListener('click')
         openGallery() {
             this.galleryService.initGallery(this.imageSrc, this.gallery);
     }
